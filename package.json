@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "normalize.css": "^8.0.0",
     "rxjs": "~6.3.3",
+    "tiny-slider": "^2.8.7",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

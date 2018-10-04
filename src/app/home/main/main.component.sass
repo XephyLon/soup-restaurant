@@ -1,0 +1,35 @@
+@import '../../../_variables.sass'
+
+.content
+  overflow: inherit
+  position: relative
+
+section
+  position: relative
+  background-color: #fff
+  height: calc(100vh - 100px - 30px)
+  padding-top: 0
+  padding-bottom: 0
+  overflow: hidden
+
+  &> .container
+    height: 100%
+
+.dark
+  color: #FFF
+
+.slide-container
+  position: relative
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.image
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 70px
+  width: calc(1110px + ((100vw - 1110px) / 2) - 70px - 30px)
+  cursor: move
+  overflow: hidden
