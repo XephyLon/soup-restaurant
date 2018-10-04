@@ -7,18 +7,92 @@ header
   width: 100%
   z-index: 999
 
+nav
+  padding-top: 27.5px
+  padding-bottom: 27.5px
+  text-transform: uppercase
+  margin-right: 1.5rem
+
+ul
+  font-family: "Oswald", sans-serif
+
+  &>li:not(:last-child)
+    margin-right: 1.5rem
+
+
+img
+  max-width: 150px
+
+.arrow
+  width: 15px
+  height: 12px
+  opacity: .6
+
 .logo
   background-color: $main-dark
   position: absolute
   top: 0
-  left: 15px
-  right: 15px
   text-align: center
   padding: 5rem 2rem
-  line-height: 45px
-  display: inline-block
   color: #FFF
+  left: 15px
+  right: 15px
 
-  & img
-    max-width: 150px
+.default
+  display: inline-block
+  line-height: 45px
 
+  &:not(.logo)
+    padding-top: 27.5px
+    padding-bottom: 27.5px
+
+.dropdown-container
+  top: calc(100% + 45px)
+  left: 0
+  position: absolute
+  background-color: #fff
+  transition: all .25s ease-out
+  transform: translateY(10px)
+  color: $text-color
+  opacity: 0
+  visibility: hidden
+  text-align: left
+
+.cart
+  position: relative
+
+.cart-icon
+  color: $cart-color
+  display: inline-block
+  width: 25px
+  height: 25px
+  opacity: .6
+
+.cart-value
+  font-size: 1.4rem
+  font-family: "Oswald", sans-serif
+  border-left: 1px solid #e0e0e0
+  margin-left: .5rem
+  padding-left: .75rem
+  transition: all .25s ease-out
+
+.notification
+  position: absolute
+  top: -.6rem
+  right: 0
+  background-color: #4aa36b
+  color: #FFF
+  font-weight: 600
+  font-size: .7rem
+  display: inline-block
+  border-radius: 30px
+  padding: 0.15rem 0.3rem 0.2rem 0.35rem
+  line-height: 1
+
+  ul
+    list-style: none
+    padding: 5px
+    margin: 0
+    line-height: 1.5
+    width: 200px
+    background-color: #fff
