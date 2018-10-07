@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
-
+  public carouselItems = [
+    {imagePath: 'assets/images/slider-burger-1.jpg', alt: 'Burger'},
+    {imagePath: 'assets/images/slider-pasta-1.jpg', alt: 'Pasta'},
+    {imagePath: 'assets/images/slider-dessert-1.jpg', alt: 'Dessert'}
+  ]
 
 }

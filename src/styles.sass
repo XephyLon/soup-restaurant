@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald')
 @import "bootstrap/scss/bootstrap-grid.scss"
 @import "bootstrap/scss/bootstrap-reboot.scss"
 @import "bootstrap/scss/_nav.scss"
 @import "normalize.css"
 @import "tiny-slider/dist/tiny-slider.css"
 @import "_variables"
+
+*
+  box-sizing: border-box
 
 html
   font-size: 14px
@@ -17,6 +21,19 @@ body
   margin: 0 30px 30px
   background: #FFF
 
+p
+  opacity: 1
+  visibility: visible
+  transition: opacity .24s ease-in-out
+  font-size: 1rem
+  font-weight: 200
+
+h1
+  font-size: 4.5rem
+  font-weight: 100
+  margin-top: 0
+  margin-bottom: 2rem
+
 a
   color: inherit
   transition: all .2s ease-in-out
@@ -29,8 +46,20 @@ img
   height: auto
   vertical-align: middle
 
+.avatar
+  width: 32px
+  border-radius: 50%
+  margin-right: .35rem
+
 .left
   float: left
 
 .right
   float: right
+
+.muted
+  color: #a4a7a9
+
+.light
+  background-color: rgb(243, 244, 244)
+  color: rgb(56, 60, 64)

@@ -1,0 +1,73 @@
+<section>
+  <div class="container section">
+    <div class="row">
+      <div class="col-md-6 push-md 6 right image bg-image">
+        <img src="{{ bgPath }}" alt="Review">
+      </div>
+      <div class="col-lg-5 col-md-9">
+        <div class="rate">
+          <fa-icon [icon]="faStar" class="active"></fa-icon>
+          <fa-icon [icon]="faStar" class="active"></fa-icon>
+          <fa-icon [icon]="faStar" class="active"></fa-icon>
+          <fa-icon [icon]="faStar" class="active"></fa-icon>
+          <fa-icon [icon]="faStar"></fa-icon>
+        </div>
+        <h1>
+          The best food in London!
+        </h1>
+        <p class="muted lead">
+          Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....
+        </p>
+        <blockquote class="block-quote block-quote--right">
+          <div class="block-quote__content block-quote__content--light">
+            <div class="rate rate--sm">
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar"></fa-icon>
+            </div>
+            <p class="block-quote__paragraph">It was an amazing feeling for my belly!</p>
+          </div>
+          <footer class="block-quote__footer">
+            <img class="avatar" src="http://www.gravatar.com/avatar/3472757f6a3732d6470f98d7d7e9cece?s=32" alt="Mark Johnson">
+            <span>
+              Mark Johnson <span class="muted">Google</span>
+            </span>
+          </footer>
+        </blockquote>
+        <blockquote class="block-quote block-quote--left">
+          <div class="block-quote__content block-quote__content--dark">
+            <div class="rate rate--sm">
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar" class="active"></fa-icon>
+              <fa-icon [icon]="faStar"></fa-icon>
+            </div>
+            <p class="block-quote__paragraph">It was an amazing feeling for my belly!</p>
+          </div>
+          <footer class="block-quote__footer">
+            <img class="avatar" src="http://www.gravatar.com/avatar/3472757f6a3732d6470f98d7d7e9cece?s=32" alt="Mark Johnson">
+            <span>
+              Mark Johnson <span class="muted">Google</span>
+            </span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+
+        <div class="row options options--bg-dark">
+          <div *ngFor="let item of optionsList" class="col-md-4">
+            <div class="options__feature">
+              <fa-icon class="options__feature--icon" [icon]="item.icon"></fa-icon>
+              <div class="options__feature__content">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+</section>
