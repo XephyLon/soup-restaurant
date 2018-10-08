@@ -17,7 +17,8 @@ import { GalleryComponent } from './about-us/gallery/gallery.component';
 import { ReviewsComponent } from './about-us/reviews/reviews.component';
 import { FaqComponent } from './about-us/faq/faq.component';
 import { BookATableComponent } from './more/book-a-table/book-a-table.component';
-import { NavigationComponent } from './menu/list/navigation/navigation.component';
+import { GridNavigationComponent } from './menu/grid-navigation/grid-navigation.component';
+import { ListNavigationComponent } from './menu/list-navigation/list-navigation.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavigationComponent } from './menu/list/navigation/navigation.component
     ReviewsComponent,
     FaqComponent,
     BookATableComponent,
-    NavigationComponent,
+    GridNavigationComponent,
+    ListNavigationComponent,
   ],
   imports: [
     BrowserModule,
