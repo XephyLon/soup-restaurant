@@ -9,3 +9,5 @@ Make a carousel component.
 Make comment bubbles reusable.
 
 Make parallax footer reusable.
+
+Make the sidenav reusable.
