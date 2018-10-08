@@ -11,6 +11,7 @@ import { SummaryComponent } from './home/summary/summary.component';
 import { PromoVideoComponent } from './home/promo-video/promo-video.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { OurMenuComponent } from './home/our-menu/our-menu.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OurMenuComponent } from './home/our-menu/our-menu.component';
     PromoVideoComponent,
     FooterComponent,
     OurMenuComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
