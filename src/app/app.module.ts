@@ -17,6 +17,7 @@ import { GalleryComponent } from './about-us/gallery/gallery.component';
 import { ReviewsComponent } from './about-us/reviews/reviews.component';
 import { FaqComponent } from './about-us/faq/faq.component';
 import { BookATableComponent } from './more/book-a-table/book-a-table.component';
+import { NavigationComponent } from './menu/list/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BookATableComponent } from './more/book-a-table/book-a-table.component'
     ReviewsComponent,
     FaqComponent,
     BookATableComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
