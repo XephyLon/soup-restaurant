@@ -20,6 +20,7 @@ import { BookATableComponent } from './more/book-a-table/book-a-table.component'
 import { GridNavigationComponent } from './menu/grid-navigation/grid-navigation.component';
 import { ListNavigationComponent } from './menu/list-navigation/list-navigation.component';
 import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
+import { BlogsPageComponent } from './more/blog/blogs-page/blogs-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
     GridNavigationComponent,
     ListNavigationComponent,
     BlogpostComponent,
+    BlogsPageComponent,
   ],
   imports: [
     BrowserModule,
