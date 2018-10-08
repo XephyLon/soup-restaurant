@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './home/main/main.component';
 import { SummaryComponent } from './home/summary/summary.component';
 import { PromoVideoComponent } from './home/promo-video/promo-video.component';
+import { FooterComponent } from './home/footer/footer.component';
+import { OurMenuComponent } from './home/our-menu/our-menu.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { PromoVideoComponent } from './home/promo-video/promo-video.component';
     MainComponent,
     SummaryComponent,
     PromoVideoComponent,
+    FooterComponent,
+    OurMenuComponent,
   ],
   imports: [
     BrowserModule,
