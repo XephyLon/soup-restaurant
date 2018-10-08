@@ -21,6 +21,7 @@ import { GridNavigationComponent } from './menu/grid-navigation/grid-navigation.
 import { ListNavigationComponent } from './menu/list-navigation/list-navigation.component';
 import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
 import { BlogsPageComponent } from './more/blog/blogs-page/blogs-page.component';
+import { SpecialOffersComponent } from './special-offers/special-offers.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { BlogsPageComponent } from './more/blog/blogs-page/blogs-page.component'
     ListNavigationComponent,
     BlogpostComponent,
     BlogsPageComponent,
+    SpecialOffersComponent,
   ],
   imports: [
     BrowserModule,
