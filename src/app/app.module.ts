@@ -19,6 +19,7 @@ import { FaqComponent } from './about-us/faq/faq.component';
 import { BookATableComponent } from './more/book-a-table/book-a-table.component';
 import { GridNavigationComponent } from './menu/grid-navigation/grid-navigation.component';
 import { ListNavigationComponent } from './menu/list-navigation/list-navigation.component';
+import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ListNavigationComponent } from './menu/list-navigation/list-navigation.
     BookATableComponent,
     GridNavigationComponent,
     ListNavigationComponent,
+    BlogpostComponent,
   ],
   imports: [
     BrowserModule,
