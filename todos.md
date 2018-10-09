@@ -1,6 +1,6 @@
 ###TODO TOMORROW###
 
-Style Home, About, and Services.
+Style {{ Home }}, About, and Services.
 
 Work on Special Offers component.
 
