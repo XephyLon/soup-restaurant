@@ -13,18 +13,22 @@
         <ul>
           <li *ngFor="let item of newsList">
             <a href="#" class="title">{{ item.title }}</a>
-            <span class="date">{{ item.date }}</span>
+            <span class="date">{{ item.date }}<fa-icon [icon]="faArrowRight"></fa-icon></span>
           </li>
         </ul>
       </div>
       <div class="footer__newsletter">
         <h5>Subscribe</h5>
         <form method="post">
-          <div></div>
-          <div></div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Type your E-mail...">
+            <span class="input-group-btn">
+              <button class="btn btn-primary btn-submit" type="submit" name="submit">subscribe</button>
+            </span>
+          </div>
         </form>
-        <h5>Social Media</h5>
-        <a [href]="link.url" [class]="link.class" *ngFor="let link of socialMedia">
+        <h5 class="mb-3 mt-3">Social Media</h5>
+        <a [href]="link.url" class="footer__icon__social {{ link.class }}" *ngFor="let link of socialMedia">
           <fa-icon [icon]="link.icon"></fa-icon>
         </a>
       </div>
