@@ -18,3 +18,5 @@ Make comment bubbles reusable.
 Make parallax footer reusable.
 
 Make the Side-nav reusable.
+
+Fix Services order implementation.

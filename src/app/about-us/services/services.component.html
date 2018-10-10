@@ -7,17 +7,33 @@
   </div>
 </div>
 
-<div class="clearfix">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h2></h2>
-        <p></p>
-        <a href="" class="btn btn-outline-primary"></a>
-      </div>
-      <div class="col-md-8">
-        <img src="" alt="">
+<section>
+  <div class="clearfix">
+    <div class="container-fluid">
+      <div *ngFor="let service of serviceList; let i = index" class="row service">
+          <!-- <div *ngIf="( isEven( i ); then even; else odd; )"></div> -->
+            <div class="col-md-4" [class.second]="isEven(i)">
+              <h2>{{ service.title }}</h2>
+              <p>{{ service.text }}</p>
+              <a href="" class="btn btn-outline-primary">Book Service</a>
+            </div>
+            <div class=" col-md-8" [class.first]="isEven(i)">
+              <div class="bg-image" [ngStyle]="service.image"></div>
+            </div>
+
+<!--
+          <ng-template #odd>
+            <div class=" second col-md-4">
+              <h2>{{ service.title }}</h2>
+              <p>{{ service.text }}</p>
+              <a href="" class="btn btn-outline-primary">Book Service</a>
+            </div>
+            <div class=" first col-md-8">
+              <div class="bg-image" [ngStyle]="{{ service.image }}"></div>
+            </div>
+          </ng-template> -->
+
       </div>
     </div>
   </div>
-</div>
+</section>
