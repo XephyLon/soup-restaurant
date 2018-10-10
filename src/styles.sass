@@ -54,6 +54,30 @@ img
   border-radius: 50%
   margin-right: .35rem
 
+.btn-primary
+  border-radius: 0
+  padding: 1.5rem 1rem
+  font-size: 1.2rem
+  margin: 1rem 0
+  color: #FFF
+  background-color: $primary
+  outline: none
+  border: 1px solid $primary
+
+
+.btn-outline-primary
+  color: $primary
+  border: 1px solid $primary
+  border-radius: 0
+  padding: 1.5rem 1rem
+  font-size: 1.2rem
+  margin: 1rem 0
+
+  &:hover
+    color: #FFF
+    border: 1px solid #FFF
+    background-color: $primary
+
 .left
   float: left
 
@@ -66,3 +90,15 @@ img
 .light
   background-color: $light-bgc
   color: $text-color
+
+.global--page-title
+  position: relative
+  padding: 6rem 0 7rem
+
+  & h1
+    font-size: 5.5rem
+    line-height: 1.1
+
+  & h4
+    font-size: 1.75rem
+    font-weight: 300
