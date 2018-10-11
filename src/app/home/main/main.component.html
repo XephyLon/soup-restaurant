@@ -1,4 +1,17 @@
-  <section>
-    <div class="container-fluid dark">
-    </div>
-  </section>
+<section>
+  <div class="container-fluid dark">
+    <ngu-carousel class="slide-container" #myCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
+      <ngu-tile class="image" *nguCarouselDef="let item; let i = index; let ani = animate">
+        <!-- [@slider]="ani" PLease this animation to this tile to see animation. stackblitz have error with animations -->
+        <div class="tile" [style.background]="'url('+item+')'">
+          <h1>{{ i + 1 }}</h1>
+        </div>
+      </ngu-tile>
+      <button NguCarouselPrev>&lt;</button>
+      <button NguCarouselNext>&gt;</button>
+      <!-- <ul class="myPoint" NguCarouselPoint>
+        <li *ngFor="let i of myCarousel.pointNumbers; let i = index" [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"></li>
+      </ul> -->
+    </ngu-carousel>
+  </div>
+</section>
