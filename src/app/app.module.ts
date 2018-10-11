@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax'
+import { NguCarouselModule } from '@ngu/carousel'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,7 +49,8 @@ import { SpecialOffersComponent } from './special-offers/special-offers.componen
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    ParallaxModule
+    ParallaxModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

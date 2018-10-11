@@ -2,7 +2,7 @@
 
 <!-- Style {{ Home }}, {{ About }}, and {{ Services }}. -->
 
-Work on Special Offers component.
+<!-- Work on Special Offers component. -->
 
 Make a carousel component.
 
