@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-special-offers',
@@ -7,5 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecialOffersComponent {
   offerImage = 'assets/images/post02-1.jpg'
+  faCheck = faCheck
 
 }
