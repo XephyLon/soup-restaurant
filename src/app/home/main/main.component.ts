@@ -17,7 +17,7 @@ export class MainComponent {
     'assets/images/slider-burger-1.jpg',
     'assets/images/slider-pasta-1.jpg',
     'assets/images/slider-dessert-1.jpg',
-    'assets/holi.jpg'
+    'assets/images/slider-dessert-1.jpg'
   ];
   public carouselTileItems$: Observable<number[]>;
   public carouselTileConfig: NguCarouselConfig = {

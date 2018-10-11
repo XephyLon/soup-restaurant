@@ -4,7 +4,11 @@
 
 <!-- Work on Special Offers component. -->
 
-Make a carousel component.
+<!-- Make a carousel component. -->
+
+Style the carousel component
+
+Make a carousel that slides through Special Offers components.
 
 
 ### TODO LONG TERM ###
