@@ -13,10 +13,9 @@ import { startWith, take, map } from 'rxjs/operators';
 })
 export class MainComponent {
   @Input() name: string;
-  imgags = [
+  images = [
     'assets/images/slider-burger-1.jpg',
     'assets/images/slider-pasta-1.jpg',
-    'assets/images/slider-dessert-1.jpg',
     'assets/images/slider-dessert-1.jpg'
   ];
   public carouselTileItems$: Observable<number[]>;
@@ -37,13 +36,13 @@ export class MainComponent {
 
   ngOnInit() {
     this.tempData = [];
-    this.carouselTileItems$ = interval(500).pipe(
-      startWith(-1),
-      take(30),
-      map(() => {
+    this.carouselTileItems$ = interval(2000).pipe(
+      startWith(2),
+      take(3),
+      map((val) => {
         const data = (this.tempData = [
           ...this.tempData,
-          this.imgags[Math.floor(Math.random() * this.imgags.length)]
+          this.images[val]
         ]);
         return data;
       })

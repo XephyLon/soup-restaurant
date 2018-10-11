@@ -1,10 +1,9 @@
 <section>
-  <div class="container-fluid dark">
+  <div class="container-fluid">
     <ngu-carousel class="slide-container" #myCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
-      <ngu-tile *nguCarouselDef="let item; let i = index; let ani = animate">
+      <ngu-tile *nguCarouselDef="let item">
         <!-- [@slider]="ani" PLease this animation to this tile to see animation. stackblitz have error with animations -->
         <div class="tile" [style.background]="'url('+item+')'">
-          <h1>{{ i + 1 }}</h1>
         </div>
       </ngu-tile>
       <button NguCarouselPrev>&lt;</button>
