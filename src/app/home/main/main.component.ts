@@ -37,7 +37,7 @@ export class MainComponent {
   ngOnInit() {
     this.tempData = [];
     this.carouselTileItems$ = interval(2000).pipe(
-      startWith(2),
+      startWith(this.images.length - 1),
       take(3),
       map((val) => {
         const data = (this.tempData = [
