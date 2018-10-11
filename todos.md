@@ -9,6 +9,8 @@ Make a carousel component.
 
 ### TODO LONG TERM ###
 
+Make the page title a separate component
+
 Make menu a single page.
 
 Make page heading a reusable component.

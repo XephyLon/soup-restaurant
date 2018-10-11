@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './special-offers.component.html',
   styleUrls: ['./special-offers.component.sass']
 })
-export class SpecialOffersComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class SpecialOffersComponent {
+  offerImage = 'assets/images/post02-1.jpg'
 
 }
