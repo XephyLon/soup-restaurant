@@ -1,15 +1,16 @@
 <div class="content">
   <div class="clearfix">
         <div class="pt-pb-8">
+          <div class="global--bg-image bg-image"></div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 push lg-3">
+              <div class="col-lg-6 offset-lg-3">
                 <div class="form-box">
-                  <div class="form-box__title">
-                    <div class="form-box__title-image"></div>
-                    <div>
-                      <span><fa-icon></fa-icon></span>
-                      <h4 class="no-mb">Book a table</h4>
+                  <div class="form-box__header">
+                    <div class="form-box__header-image"></div>
+                    <div class="form-box__title">
+                      <span><fa-icon [icon]="faBookmark"></fa-icon></span>
+                      <h4 class="mb-0">Book a table</h4>
                       <p class="lead muted">Details about your reservation.</p>
                     </div>
                   </div>
@@ -17,33 +18,33 @@
                   <form action="">
                     <div class="form-box__content">
                       <div class="form-group">
-                        <label for=""></label>
+                        <label for="">Name and surname</label>
                         <input type="text" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label for=""></label>
+                        <label for="">E-mail</label>
                         <input type="text" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control">
+                        <label for="">Phone</label>
+                        <input type="email" class="form-control">
                       </div>
                       <div class="row">
                         <div class="col-sm-6">
                           <div class="form-group"
-                          ><label for=""></label>
-                          <input type="text" class="form-control">
+                          ><label for="">Date</label>
+                          <input type="date" class="form-control">
                         </div>
                       </div>
                         <div class="col-sm-6">
-                          <div class="form-group"
-                          ><label for=""></label>
+                          <div class="form-group">
+                            <label for="">Attends</label>
                           <input type="text" class="form-control">
                         </div>
                       </div>
                       </div>
                     </div>
-                    <button class="btn btn-secondary form-box__button" type="submit">
+                    <button class="btn btn-secondary btn-block form-box__button hvr-sweep-to-top" type="submit">
                       <span class="form-box__button--desc">Make Reservation</span>
                     </button>
                   </form>
