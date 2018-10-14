@@ -1,3 +1,9 @@
+### TODO TOMORROW ###
+
+Make menu list reusable.
+
+Fix the menu styling.
+
 ### TODO SHORT TERM ###
 
 <!-- Style {{ Home }}, {{ About }}, and {{ Services }}. -->
