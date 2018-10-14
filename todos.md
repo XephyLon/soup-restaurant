@@ -10,6 +10,8 @@ Style the carousel component
 
 Make a carousel that slides through Special Offers components.
 
+Replace some of the ugly Font Awesome icons.
+
 
 ### TODO LONG TERM ###
 
