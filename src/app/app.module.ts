@@ -23,6 +23,7 @@ import { ListNavigationComponent } from './menu/list-navigation/list-navigation.
 import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
 import { BlogsPageComponent } from './more/blog/blogs-page/blogs-page.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SpecialOffersComponent } from './special-offers/special-offers.componen
     BlogpostComponent,
     BlogsPageComponent,
     SpecialOffersComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

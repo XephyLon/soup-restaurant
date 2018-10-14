@@ -25,4 +25,8 @@ Make parallax footer reusable.
 
 Make the Side-nav reusable.
 
+Make Contact page reusable.
+
+Separate Social Media links.
+
 <!-- Fix Services order implementation. -->
