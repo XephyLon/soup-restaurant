@@ -24,6 +24,9 @@ import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
 import { BlogsPageComponent } from './more/blog/blogs-page/blogs-page.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
 import { ContactComponent } from './contact/contact.component';
+import { MenuCarouselComponent } from './carousels/menu-carousel/menu-carousel.component';
+import { OffersCarouselComponent } from './carousels/offers-carousel/offers-carousel.component';
+import { BlogCarouselComponent } from './carousels/blog-carousel/blog-carousel.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { ContactComponent } from './contact/contact.component';
     BlogsPageComponent,
     SpecialOffersComponent,
     ContactComponent,
+    MenuCarouselComponent,
+    OffersCarouselComponent,
+    BlogCarouselComponent,
   ],
   imports: [
     BrowserModule,
