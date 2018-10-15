@@ -23,14 +23,4 @@ export class GridNavigationComponent {
     {name: 'Broccoli', ingredients: 'Beef, cheese, fries, onion, potato'}
   ]
 
-  toggleCollapse() {
-    let _content = document.querySelectorAll('.collapse-toggle');
-    for (let i = 0; i < _content.length; i++) {
-      if (_content[i].nextElementSibling.style.maxHeight) {
-        return _content[i].nextElementSibling.style.maxHeight = null;
-      } else {
-        return _content[i].nextElementSibling.style.maxHeight = 'inherit'
-      }
-    }
-  }
 }
