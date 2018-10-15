@@ -9,34 +9,36 @@
   </div>
 </div>
 
+
+<!-- TODO: Fix it for backend implementation -->
 <div class="clearfix">
   <div class="container">
-    <div class="row-fluid">
+    <div *ngFor="let menu of menus" class="row-fluid">
       <div class="col-sm-10 offset-sm-1">
         <div class="wrapper">
           <div class="menu-category">
-            <div class="menu-category__title collapse-toggle collapsed">
-              <div class="global--bg-image bg-image"></div>
-              <h2>Burgers</h2>
+            <div class="menu-category__title collapse-toggle" (click)="toggleCollapse()">
+              <div class="global--bg-image" [ngStyle]="{'background-image': menu.image}"></div>
+              <h2>{{ menu.name }}</h2>
             </div>
-            <div class="menu-category__content collapse show">
-              <div class="menu-item menu-list-item">
-                <div class="row align-item-center">
+            <div class="menu-category__content collapsed">
+              <div *ngFor="let item of burgers" class="menu-item menu-list-item">
+                <div class="row align-items-center">
                   <div class="col-sm-6 mb-2 mb-sm-0">
-                    <h6 class="mb-0"><a href="#">Nigiri Sushi</a></h6>
+                    <h6 class="mb-0"><a href="#">{{ item.name }}</a></h6>
                     <span class="muted text-sm">
-                      <p>Beef, cheese, fries, onion, potato</p>
+                      <p>{{ item.ingredients }}</p>
                     </span>
                   </div>
                   <div class="col-sm-6 text-sm-right">
                     <span class="text-md mr-4">
                       <span class="muted">From</span>
                       <span class="price"> $</span>
-                      5.00
+                      {{ item.price }}
                     </span>
 
                     <!-- TODO: Fix the hover effect. -->
-                    
+
                     <button class="btn btn-outline-secondary btn-sm">
                       <span>Add to Cart</span>
                     </button>

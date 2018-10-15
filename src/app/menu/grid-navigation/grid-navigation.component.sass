@@ -9,7 +9,8 @@
     min-height: 160px
     color: #FFF
     padding: 3rem
-    background: $main-dark
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
+
 
   &__content
     border: 1px solid #e0e0e0
@@ -18,6 +19,14 @@
 .menu-list-item
   padding: 1.25rem 1.5rem
   line-height: 1.2
+
+.collapsed
+  max-height: 0
+  overflow: hidden
+  transition: max-height .25s ease-out
+
+.show
+  max-height: inherit
 
 .collapse-toggle
   cursor: pointer
@@ -33,7 +42,13 @@
   margin-bottom: 0
 
 h2
-  font-weight: 300
+  position: absolute
+  bottom: 3rem
+  left: 4rem
+  font-size: 5rem
+  z-index: 2
+  margin-bottom: 0
+  font-weight: 100
 
 h6
   font-size: 1.1rem
@@ -42,12 +57,8 @@ h6
 
 p
   font-size: 1rem
-  font-weight: 200
+  font-weight: 300
   margin-bottom: 2rem
-
-.bg-image
-  background-image: url('../../../assets/images/menu-title-burgers-1.jpg')
-  z-index: 0
 
 .text-sm
   font-size: .95rem

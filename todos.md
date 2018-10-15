@@ -12,6 +12,8 @@ Fix the menu styling.
 
 <!-- Make a carousel component. -->
 
+Rewrite the Menu component as a stateful accordion with stateless panels representing the categories and the meals.
+
 Style the carousel component
 
 Make a carousel that slides through Special Offers components.
