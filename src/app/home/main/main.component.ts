@@ -18,6 +18,8 @@ export class MainComponent {
     'assets/images/slider-pasta-1.jpg',
     'assets/images/slider-dessert-1.jpg'
   ];
+
+  public carouselTileTitles$: Observable<number[]>;
   public carouselTileItems$: Observable<number[]>;
   public carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },

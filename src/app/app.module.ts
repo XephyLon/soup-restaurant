@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax'
 import { NguCarouselModule } from '@ngu/carousel'
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,7 +53,8 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     FontAwesomeModule,
     ParallaxModule,
-    NguCarouselModule
+    NguCarouselModule,
+    AnimateOnScrollModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

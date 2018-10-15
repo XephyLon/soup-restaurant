@@ -1,13 +1,11 @@
 <section>
-  <div class="container-fluid">
     <ngu-carousel class="slide-container" #myCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
       <ngu-tile *nguCarouselDef="let item">
         <!-- [@slider]="ani" PLease this animation to this tile to see animation. stackblitz have error with animations -->
         <div class="tile" [style.background]="'url('+item+')'">
         </div>
       </ngu-tile>
-      <button NguCarouselPrev>&lt;</button>
-      <button NguCarouselNext>&gt;</button>
+      <button NguCarouselPrev class="leftRs">&lt;</button>
+      <button NguCarouselNext class="rightRs">&gt;</button>
     </ngu-carousel>
-  </div>
 </section>
