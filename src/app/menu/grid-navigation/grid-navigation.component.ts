@@ -24,11 +24,13 @@ export class GridNavigationComponent {
   ]
 
   toggleCollapse() {
-    let _content = document.querySelector('.collapse-toggle').nextElementSibling;
-    if (_content.style.maxHeight) {
-      return _content.style.maxHeight = null;
-    } else {
-      return _content.style.cssText = 'max-height: auto'
+    let _content = document.querySelectorAll('.collapse-toggle');
+    for (let i = 0; i < _content.length; i++) {
+      if (_content[i].nextElementSibling.style.maxHeight) {
+        return _content[i].nextElementSibling.style.maxHeight = null;
+      } else {
+        return _content[i].nextElementSibling.style.maxHeight = 'inherit'
+      }
     }
   }
 }

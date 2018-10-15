@@ -1,9 +1,3 @@
-### TODO TOMORROW ###
-
-Make menu list reusable.
-
-Fix the menu styling.
-
 ### TODO SHORT TERM ###
 
 <!-- Style {{ Home }}, {{ About }}, and {{ Services }}. -->
@@ -12,9 +6,9 @@ Fix the menu styling.
 
 <!-- Make a carousel component. -->
 
-Rewrite the Menu component as a stateful accordion with stateless panels representing the categories and the meals.
-
 Style the carousel component
+
+Rewrite the Menu component as a stateful accordion with stateless panels representing the categories and the meals.
 
 Make a carousel that slides through Special Offers components.
 

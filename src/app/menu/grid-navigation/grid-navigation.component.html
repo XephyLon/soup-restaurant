@@ -11,17 +11,17 @@
 
 
 <!-- TODO: Fix it for backend implementation -->
-<div class="clearfix">
+<div class="clearfix page-content">
   <div class="container">
     <div *ngFor="let menu of menus" class="row-fluid">
       <div class="col-sm-10 offset-sm-1">
         <div class="wrapper">
           <div class="menu-category">
-            <div class="menu-category__title collapse-toggle" (click)="toggleCollapse()">
+            <div class="menu-category__title collapse-toggle" (click)="collapse = !collapse">
               <div class="global--bg-image" [ngStyle]="{'background-image': menu.image}"></div>
               <h2>{{ menu.name }}</h2>
             </div>
-            <div class="menu-category__content collapsed">
+            <div class="menu-category__content collapsed" [ngClass]="collapse? 'show' : null">
               <div *ngFor="let item of burgers" class="menu-item menu-list-item">
                 <div class="row align-items-center">
                   <div class="col-sm-6 mb-2 mb-sm-0">
