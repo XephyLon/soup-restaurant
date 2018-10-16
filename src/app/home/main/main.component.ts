@@ -33,7 +33,7 @@ export class MainComponent {
   };
   tempData: any[];
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor() {}
 
   ngOnInit() {
     this.tempData = [];
