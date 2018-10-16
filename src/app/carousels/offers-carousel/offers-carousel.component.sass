@@ -1,0 +1,82 @@
+section
+  position: relative
+  padding-top: 5rem
+  padding-bottom: 5rem
+
+ngu-carousel
+  width: 100%
+
+.item
+  position: relative
+
+.leftRs
+  position: absolute
+  margin: auto
+  top: 0
+  bottom: 0
+  width: 50px
+  height: 50px
+  left: 0
+  background-color: transparent
+  border: none
+  font-size: 3rem
+  z-index: 5
+
+.rightRs
+  position: absolute
+  margin: auto
+  top: 0
+  bottom: 0
+  width: 50px
+  height: 50px
+  right: 0
+  background-color: transparent
+  border: none
+  font-size: 3rem
+  z-index: 5
+
+
+// Temporary rules until backend implementation
+
+.special-offer
+  overflow: hidden
+  position: relative
+  table-layout: fixed
+  margin-bottom: 2rem
+  padding: 5rem 0
+
+  &__image
+    width: 100%
+    height: auto
+    z-index: 0
+
+  &__check-list
+    margin-bottom: 0
+    font-size: 1.9rem
+    font-weight: 300
+
+    &> li
+      margin-bottom: 1rem
+
+
+  &__content
+    width: 65%
+    padding: 25px
+    position: absolute
+    background-color: #FFF
+    line-height: 1
+    z-index: 2
+    box-shadow: -9px 10px 12px -2px rgba(0,0,0,0.43)
+    top: 15%
+    bottom: 15%
+    &> h2
+      font-size: 4.4rem
+      font-weight: 100
+      margin-bottom: .5rem
+
+    &> h5
+      margin-bottom: 3rem
+      font-size: 2.5rem
+      font-weight: 100
+
+// End of temporary rules

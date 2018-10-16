@@ -1,3 +1,22 @@
-<p>
-  offers-carousel works!
-</p>
+<section>
+  <div class="container">
+    <ngu-carousel #offersCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
+      <ngu-tile class="item" *nguCarouselDef="let item">
+          <div class="row special-offer">
+            <div class="row col-md-8 special-offer__image">
+              <img [src]="item.image">
+            </div>
+            <div class="row col-md-6 offset-md-6 special-offer__content">
+              <h2><a href="#">{{ item.title }}</a></h2>
+              <h5 class="muted">{{ item.subtitle }}</h5>
+              <ul class="special-offer__check-list">
+                <li *ngFor="let checks of item.checklist"><fa-icon [icon]="checks.icon"></fa-icon> {{ checks.text }}</li>
+              </ul>
+            </div>
+          </div>
+      </ngu-tile>
+      <button NguCarouselPrev class="leftRs">&lt;</button>
+      <button NguCarouselNext class="rightRs">&gt;</button>
+    </ngu-carousel>
+  </div>
+</section>

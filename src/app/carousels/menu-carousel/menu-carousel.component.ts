@@ -23,7 +23,7 @@ export class MenuCarouselComponent implements OnInit {
   public carouselTileItems$: Observable<number[]>
   public carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 2, md: 3, lg: 3, all: 0 },
-    speed: 150,
+    speed: 550,
     point: { visible: true },
     touch: true,
     loop: true,
