@@ -1,3 +1,11 @@
-<p>
-  menu-carousel works!
-</p>
+<section>
+  <ngu-carousel #menuCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
+    <div class="wrapper">
+      <ngu-tile class="item" *nguCarouselDef="let item">
+        <div class="tile" [style.backgroundImage]="'url('+item+')'"></div>
+      </ngu-tile>
+    </div>
+    <button NguCarouselPrev class="leftRs">&lt;</button>
+    <button NguCarouselNext class="rightRs">&gt;</button>
+  </ngu-carousel>
+</section>
