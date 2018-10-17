@@ -1,7 +1,7 @@
 <section>
   <ngu-carousel class="slide-container" #myCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
     <ngu-tile *nguCarouselDef="let item">
-      <div class="tile" [style.background]="'url('+item+')'"></div>
+      <div class="tile zoom" [style.background]="'url('+item+')'"></div>
     </ngu-tile>
     <button NguCarouselPrev class="leftRs">&lt;</button>
     <button NguCarouselNext class="rightRs">&gt;</button>

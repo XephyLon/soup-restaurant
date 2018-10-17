@@ -6,25 +6,24 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.sass'],
   animations: [
-    trigger('fadeInOut', [
+    trigger('slideInOut', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate(500, style({ opacity: 1 }))
+        style({height: 0, opacity: 0 }),
+        animate('200ms ease-in', style({height: 'auto', opacity: 1 }))
       ]),
       transition(':leave', [
-        animate(500, style({ opacity: 0 }))
+        animate('200ms ease-in', style({height: 0, opacity: 0 }))
       ])
     ]),
-    trigger('slideIn', [
-      state('*', style({ 'overflow-y': 'hidden' })),
-      state('void', style({ 'overflow-y': 'hidden' })),
-      transition('* => void', [
-        style({ height: '*' }),
-        animate(250, style({ height: 0 }))
-      ]),
-      transition('void => *', [
-        style({ height: '0' }),
-        animate(250, style({ height: '*' }))
+    trigger('extend', [
+      state('open', style({
+        height: '35vh'
+      })),
+      state('close', style({
+        height: '25vh'
+      })),
+      transition('open <=> close', [
+        animate('.2s')
       ])
     ])
   ]
