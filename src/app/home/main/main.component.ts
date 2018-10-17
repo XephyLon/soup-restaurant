@@ -14,15 +14,14 @@ import { startWith, take, map } from 'rxjs/operators';
 export class MainComponent {
   @Input() name: string;
   images = [
-    'assets/images/slider-burger-1.jpg',
-    'assets/images/slider-pasta-1.jpg',
-    'assets/images/slider-dessert-1.jpg'
+    {title: 'Boscaiola Pasta', subTitle: 'New Product!', image: 'assets/images/slider-pasta-1.jpg'},
+    {title: 'Get 10% off coupon!', subTitle: 'And use it with your next order!', image: 'assets/images/slider-burger-1.jpg'},
+    {title: 'Delicious Desserts', subTitle: 'Order it online even now!', image: 'assets/images/slider-dessert-1.jpg'}
   ];
-
   public carouselTileItems$: Observable<number[]>;
   public carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
-    speed: 250,
+    speed: 500,
     point: {
       visible: true
     },

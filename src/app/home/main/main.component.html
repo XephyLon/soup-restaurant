@@ -1,7 +1,16 @@
 <section>
   <ngu-carousel class="slide-container" #myCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
     <ngu-tile *nguCarouselDef="let item">
-      <div class="tile zoom" [style.background]="'url('+item+')'"></div>
+      <div class="overlay"></div>
+      <div class="tile zoom" [style.background]="'url('+item.image+')'"></div>
+      <div class="container">
+        <div class="row on-top col-lg-10">
+          <h1 class="mb-2">{{ item.title }}</h1>
+          <h5 class="muted mb-5">{{ item.subTitle }}</h5>
+          <a href="#" class="btn btn-outline-primary">Get it now!</a>
+        </div>
+      </div>
+
     </ngu-tile>
     <button NguCarouselPrev class="leftRs">&lt;</button>
     <button NguCarouselNext class="rightRs">&gt;</button>
