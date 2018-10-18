@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { interval, Observable } from 'rxjs';
 import { startWith, take, map } from 'rxjs/operators';

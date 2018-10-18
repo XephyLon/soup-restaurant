@@ -6,11 +6,13 @@
 
 <!-- Make a carousel component. -->
 
-Style the carousel component
+The freaking responsive design!
 
-Rewrite the Menu component as a stateful accordion with stateless panels representing the categories and the meals.
+<!-- Style the carousel component -->
 
-Make a carousel that slides through Special Offers components.
+<!-- Rewrite the Menu component as a stateful accordion with stateless panels representing the categories and the meals. -->
+
+<!-- Make a carousel that slides through Special Offers components. -->
 
 Replace some of the ugly Font Awesome icons.
 
@@ -19,7 +21,7 @@ Replace some of the ugly Font Awesome icons.
 
 Make the page title a separate component
 
-Make menu a single page.
+<!-- Make menu a single page. -->
 
 Make page heading a reusable component.
 
