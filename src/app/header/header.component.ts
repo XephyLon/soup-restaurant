@@ -7,6 +7,7 @@ import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent {
+  isToggled: boolean
   faCartArrowDown = faCartArrowDown
   logoPath = 'assets/logo.svg';
   arrowPath = 'assets/arrow-down.svg';
