@@ -1,5 +1,14 @@
 @import "../../_variables"
+@import "../../_breakpoints"
+@import "hamburgers/_sass/hamburgers/hamburgers.scss"
 
+button
+  position: absolute
+  top: 30px
+  left: -15px
+  z-index: 999
+  @include breakpoint(sm)
+    display: none !important
 header
   background-color: #FFF
   display: block
@@ -8,10 +17,18 @@ header
   z-index: 999
 
 nav
-  padding-top: 27.5px
-  padding-bottom: 27.5px
-  text-transform: uppercase
-  margin-right: 1.5rem
+  display: none
+  @include breakpoint (sm)
+    display: inline-block
+    line-height: 45px
+    padding-top: 27.5px
+    padding-bottom: 27.5px
+    text-transform: uppercase
+    &:not(.logo)
+      padding-top: 27.5px
+      padding-bottom: 27.5px
+  @include breakpoint(md)
+    margin-right: 1.5rem
 
 ul
   font-family: "Oswald", sans-serif
@@ -28,23 +45,39 @@ img
   height: 12px
   opacity: .6
 
+.cart-container
+  position: absolute
+  top: 40px
+  right: 15px
+
 .logo
+  padding: 1rem 0
   background-color: $main-dark
   position: absolute
   top: 0
   text-align: center
-  padding: 5rem 2rem
   color: #FFF
-  left: 15px
-  right: 15px
+  left: -21%
+  right: -21%
+  @include breakpoint (sm)
+    left: 15px
+    right: 15px
+    padding: 5rem 2rem
+  &__image
+    transform: scale(.6)
+    @include breakpoint (sm)
+      transform: scale(1)
 
 .default
+  @include breakpoint (xs)
+    top: 60%
+    padding: 0
+    margin: 0
+    right: -10%
+    color: #FFF
   display: inline-block
   line-height: 45px
 
-  &:not(.logo)
-    padding-top: 27.5px
-    padding-bottom: 27.5px
 
 .dropdown-container
   top: calc(100% + 45px)

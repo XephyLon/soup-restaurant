@@ -5,6 +5,7 @@
 @import "animate.css"
 @import "tiny-slider/dist/tiny-slider.css"
 @import "_variables"
+@import "_breakpoints"
 
 *
   box-sizing: border-box
@@ -18,7 +19,9 @@ body
   font-weight: 400
   line-height: 1.6
   overflow-x: hidden
-  margin: 0 30px 30px
+  margin: 0
+  @include breakpoint (md)
+    margin: 0 30px 30px
   background: #FFF
 
 button

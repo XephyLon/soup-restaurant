@@ -2,14 +2,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <div class="default logo">
+        <div class="logo">
           <a href="">
-            <img src="{{ logoPath }}" alt="Logo" width="88">
+            <img class="logo__image" src="{{ logoPath }}" alt="Logo" width="88">
           </a>
         </div>
       </div>
       <div class="col-md-7">
-        <nav class="left default">
+        <button class="hamburger hamburger--spin" [class.is-active]="isToggled" (click)="isToggled = !isToggled">
+          <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        </button>
+        <nav>
           <ul class="nav">
             <li *ngFor="let item of list" class="{{ item.class }}" >
               <div *ngIf="item.dropdownList; then dropdown else noDropdown"></div>
@@ -27,11 +32,11 @@
           </ul>
         </nav>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 cart-container">
         <a class="default right" href="">
           <div>
             <span class="cart">
-              <img class="cart-icon" src="{{ cartPath }}" alt="Shopping Cart">
+              <fa-icon [icon]="faCartArrowDown" class="cart-icon"></fa-icon>
               <span class="notification">4</span>
             </span>
             <span class="cart-value">$247.00</span>

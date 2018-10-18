@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent {
+  faCartArrowDown = faCartArrowDown
   logoPath = 'assets/logo.svg';
   arrowPath = 'assets/arrow-down.svg';
   cartPath = 'assets/shopping-cart.svg';
