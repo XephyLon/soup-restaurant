@@ -5,10 +5,12 @@
 button
   position: absolute
   top: 30px
-  left: -15px
+  left: -20px
   z-index: 999
   @include breakpoint(sm)
     display: none !important
+  @include breakpoint(xs)
+    left: 0
 header
   background-color: #FFF
   display: block
@@ -69,7 +71,7 @@ img
       transform: scale(1)
 
 .default
-  @include breakpoint (xs)
+  @include breakpoint (sm)
     top: 60%
     padding: 0
     margin: 0

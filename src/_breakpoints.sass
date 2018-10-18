@@ -1,6 +1,9 @@
 =breakpoint($class)
-  @if $class == xs
-    @media (max-width: 767px)
+  @if $class == ss
+    @media (max-width: 567px)
+      @content
+  @else if $class == xs
+    @media (min-width: 668px)
       @content
   @else if $class == sm
     @media (min-width: 768px)
