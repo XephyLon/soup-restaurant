@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, AfterContentInit } from '@angular/core';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass']
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterContentInit {
+
+  constructor (public breakpointObserver: BreakpointObserver) {}
+  wrapper = document.getElementById('myContainer')
+  breakpoint: boolean
   isToggled: boolean
   faCartArrowDown = faCartArrowDown
   logoPath = 'assets/logo.svg';
@@ -39,4 +44,16 @@ export class HeaderComponent {
       'blog post'
     ]}
   ];
+
+  ngAfterContentInit() {
+    this.breakpointObserver
+      .observe(['(min-width: 768px)'])
+      .subscribe((state: BreakpointState) => {
+        if( state.matches ) {
+          this.breakpoint = true
+        } else {
+          this.breakpoint = false
+        }
+      })
+  }
 }

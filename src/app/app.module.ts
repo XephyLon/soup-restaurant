@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax'
 import { NguCarouselModule } from '@ngu/carousel'
@@ -62,6 +63,7 @@ import { AccordionComponent } from './global/accordion/accordion.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    LayoutModule,
     FontAwesomeModule,
     ParallaxModule,
     NguCarouselModule,

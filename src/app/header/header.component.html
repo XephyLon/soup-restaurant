@@ -1,5 +1,5 @@
 <header>
-  <div class="container">
+  <div id="myContainer" [ngClass]="breakpoint? 'container': 'container-fluid'">
     <div class="row">
       <div class="col-md-3">
         <div class="logo">
@@ -20,7 +20,6 @@
               <div *ngIf="item.dropdownList; then dropdown else noDropdown"></div>
               <ng-template #dropdown><a href="">{{ item.name }} <span><img class="arrow" src="{{ arrowPath }}" alt="Arrow pointing down"></span></a></ng-template>
               <ng-template #noDropdown><a href="">{{ item.name }} </a></ng-template>
-
                 <div *ngIf="item.hasDropdown" class="dropdown-container">
                   <ul>
                     <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item">
