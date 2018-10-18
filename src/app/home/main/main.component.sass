@@ -1,4 +1,5 @@
-@import '../../../_variables.sass'
+@import '../../../_variables'
+@import '../../../_breakpoints'
 
 button
   background-color: #282b2e
@@ -11,6 +12,17 @@ button
   &:focus
     outline: none
 
+h1
+  @include breakpoint(xs)
+    font-size: 2.5rem
+    font-weight: 300
+
+
+h5
+  @include breakpoint(xs)
+    font-size: 1.5rem
+    font-weight: 300
+
 a
   padding: 1.5rem 3rem
   font-size: 1.5rem
@@ -18,10 +30,12 @@ a
 section
   position: relative
   background-color: #fff
-  height: calc(100vh - 100px - 30px)
+  height: 100vh
   padding-top: 0
   padding-bottom: 0
   overflow: hidden
+  @include breakpoint(sm)
+    height: calc(100vh - 100px - 30px)
 
   &> .container
     height: 100%
@@ -29,10 +43,14 @@ section
 .on-top
   z-index: 555
   position: absolute
-  top: 30vh
-  left: 30vw
   color: #fff
   display: block
+  top: 40vh
+  left: 40px
+  @include breakpoint(sm)
+    top: 30vh
+    left: 30vw
+
 
 .zoom
   animation: zooming 18s infinite both
