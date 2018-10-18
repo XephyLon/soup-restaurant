@@ -48,11 +48,12 @@ img
 .cart-container
   position: absolute
   top: 40px
-  right: 15px
+  right: 0
 
-@include breakpoint(sm)
-  .container
-    width: 100% !important
+.cart-row
+  transform: scale(.8)
+  @include breakpoint(sm)
+    transform: scale(1)
 
 .logo
   padding: 1rem 0
@@ -73,12 +74,13 @@ img
       transform: scale(1)
 
 .default
+  color: #FFF
   @include breakpoint (sm)
+    color: $cart-color
     top: 60%
     padding: 0
     margin: 0
     right: -10%
-    color: #FFF
   display: inline-block
   line-height: 45px
 
@@ -97,13 +99,18 @@ img
 
 .cart
   position: relative
+  color: #fff
+  @include breakpoint(sm)
+    color: inherit
 
 .cart-icon
-  color: $cart-color
+  color: #FFF
   display: inline-block
   width: 25px
   height: 25px
   opacity: .6
+
+
 
 .cart-value
   font-size: 1.4rem
