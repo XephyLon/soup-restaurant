@@ -1,8 +1,14 @@
 @import '../../../_variables.sass'
+@import '../../../_breakpoints.sass'
 
 h1
   color: rgba(56, 60, 64, .8)
   visibility: visible
+  font-size: 2.5rem
+  @include breakpoint(md)
+    font-size: 3.5rem
+  @include breakpoint(lg)
+    font-size: 4.5rem
 
 .block-quote
   position: relative
@@ -17,10 +23,13 @@ h1
     margin-left: 4.5rem
 
   &__paragraph
-    font-size: 1.75rem
-    font-weight: 200
-    line-height: 1.3
-    margin-bottom: 0
+    font-size: 1.3rem
+    font-weight: 300
+    @include breakpoint(sm)
+      font-size: 1.75rem
+      font-weight: 200
+      line-height: 1.3
+      margin-bottom: 0
 
   &__content
     position: relative
@@ -90,7 +99,9 @@ h1
 
 .rate
   font-size: 1.3rem
-  margin-bottom: 3rem !important
+  margin-bottom: 1rem !important
+  @include breakpoint(sm)
+    margin-bottom: 3rem !important
 
   &--sm
     font-size: .8rem
@@ -103,11 +114,20 @@ h1
   overflow: hidden
 
 .options
-  padding-top: 5rem
-  padding-bottom: 4rem
-  padding-right: 18%
-  padding-left: 3%
-  left: 4%
+  left: 0
+  text-align: center
+  display: block
+  padding-top: 1rem
+  @include breakpoint(sm)
+    padding-left: 0
+  @include breakpoint(md)
+    display: flex
+  @include breakpoint(lg)
+    padding-top: 5rem
+    padding-bottom: 4rem
+    padding-right: 18%
+    padding-left: 3%
+    left: 4%
 
 
   &__feature
@@ -115,17 +135,19 @@ h1
     display: block
 
     &--icon
-      float: left
       color: $primary
       position: relative
       display: inline-block
       font-size: 40px
       width: 52px
       vertical-align: middle
+      @include breakpoint(lg)
+        float: left
 
     &__content
-      padding-left: 65px
-      padding-top: 1.5rem
+      @include breakpoint(lg)
+        padding-left: 65px
+        padding-top: 1.5rem
 
       &>h4
         margin-bottom: .5rem
@@ -140,4 +162,3 @@ h1
 
   &--bg-dark
     background-color: $main-dark
-    display: flex
