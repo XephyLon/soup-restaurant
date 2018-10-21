@@ -1,6 +1,13 @@
 @import '../../../_variables'
+@import '../../../_breakpoints'
 
 .about
+
+  &__text-content
+    background-color: rgba(#FFF, 0.9)
+    left: -2%
+    @include breakpoint(md)
+      left: auto
 
   &__summary
     margin: 0 0 0 1.5rem
@@ -41,12 +48,21 @@
       text-align: center
 
     & a
-      margin-left: 2rem
+      display: block
+      @include breakpoint(md)
+        display: inline-block
+        margin-left: 2rem
 
 h2
-  font-size: 4.5rem
+  font-size: 2.5rem
   font-weight: 100
   margin-bottom: 2rem
+  @include breakpoint(sm)
+    font-size: 4.5rem
+
+p
+  color: #000
+  font-weight: 300
 
 h6
   margin-top: 2rem

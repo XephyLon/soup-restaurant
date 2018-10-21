@@ -13,7 +13,6 @@ import { MainComponent } from './home/main/main.component';
 import { SummaryComponent } from './home/summary/summary.component';
 import { PromoVideoComponent } from './home/promo-video/promo-video.component';
 import { FooterComponent } from './home/footer/footer.component';
-import { OurMenuComponent } from './home/our-menu/our-menu.component';
 import { AboutComponent } from './about-us/about/about.component';
 import { ServicesComponent } from './about-us/services/services.component';
 import { GalleryComponent } from './about-us/gallery/gallery.component';
@@ -40,7 +39,6 @@ import { AccordionComponent } from './global/accordion/accordion.component';
     SummaryComponent,
     PromoVideoComponent,
     FooterComponent,
-    OurMenuComponent,
     AboutComponent,
     ServicesComponent,
     GalleryComponent,
