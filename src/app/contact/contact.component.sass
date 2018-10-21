@@ -1,7 +1,18 @@
 @import '../../_variables'
+@import '../../_breakpoints'
 
 .global--page-title
   background-color: $light-bgc
+
+iframe
+  width: 100%
+
+.google-maps
+  position: relative
+  overflow: hidden
+  height: 256px
+  @include breakpoint(md)
+    height: 512px
 
 img
   height: auto
@@ -19,15 +30,21 @@ article
 
 
 .custom-container
-  padding-left: 15px
-  padding-right: 110px
   display: inline-block
   top: 50px
+  @include breakpoint(lg)
+    padding-left: 15px
+    padding-right: 110px
 
 .offset-lg-1
   padding: 80px 110px 0 20px
   margin-right: 0
   display: inline-block
+
+.text-content
+  text-align: center
+  @include breakpoint(md)
+    text-align: left
 
 .wrapper
   align-items: center

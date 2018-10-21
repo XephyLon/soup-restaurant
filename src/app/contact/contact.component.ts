@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterContentInit } from '@angular/core';
 import { faFacebook, faTwitter, faGoogle, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 
 @Component({
   selector: 'app-contact',
