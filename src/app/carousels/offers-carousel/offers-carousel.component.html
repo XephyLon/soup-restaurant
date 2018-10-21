@@ -7,16 +7,17 @@
               <img [src]="item.image">
             </div>
             <div class="row col-md-6 offset-md-6 special-offer__content">
-              <h2><a href="#">{{ item.title }}</a></h2>
+              <h2 class="col-sm-12"><a href="#">{{ item.title }}</a></h2>
               <h5 class="muted">{{ item.subtitle }}</h5>
               <ul class="special-offer__check-list">
-                <li *ngFor="let checks of item.checklist"><fa-icon [icon]="checks.icon"></fa-icon> {{ checks.text }}</li>
+                <!-- TODO: Apply colors dynamically -->
+                <li *ngFor="let checks of item.checklist"><fa-icon [icon]="checks.icon" [ngClass]="checks.color"></fa-icon> {{ checks.text }}</li>
               </ul>
             </div>
           </div>
       </ngu-tile>
-      <button NguCarouselPrev class="leftRs">&lt;</button>
-      <button NguCarouselNext class="rightRs">&gt;</button>
+      <button NguCarouselPrev class="leftRs"><fa-icon [icon]="faArrowLeft"></fa-icon></button>
+      <button NguCarouselNext class="rightRs"><fa-icon [icon]="faArrowRight"></fa-icon></button>
     </ngu-carousel>
   </div>
 </section>

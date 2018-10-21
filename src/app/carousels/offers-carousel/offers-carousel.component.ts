@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Observable, interval } from 'rxjs';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { startWith, take, map } from 'rxjs/operators';
@@ -12,6 +12,8 @@ import { startWith, take, map } from 'rxjs/operators';
 export class OffersCarouselComponent implements OnInit {
 
   @Input() name: string
+  faArrowLeft = faArrowLeft
+  faArrowRight = faArrowRight
   offers = [
     {
       image: 'assets/images/special-dish-1.jpg',
@@ -20,15 +22,18 @@ export class OffersCarouselComponent implements OnInit {
       checklist: [
         {
           icon: faCheck,
-          text: 'Only on Friday'
+          text: 'Only on Friday',
+          color: 'green'
         },
         {
           icon: faCheck,
-          text: 'All products'
+          text: 'All products',
+          color: 'green'
         },
         {
           icon: faCheck,
-          text: 'Online order'
+          text: 'Online order',
+          color: 'green'
         }
       ]
     },
@@ -39,15 +44,18 @@ export class OffersCarouselComponent implements OnInit {
       checklist: [
         {
           icon: faCheck,
-          text: 'Only on Tuesdays'
+          text: 'Only on Tuesdays',
+          color: 'green'
         },
         {
           icon: faTimes,
-          text: 'Order higher than $40 '
+          text: 'Order higher than $40 ',
+          color:'red'
         },
         {
           icon: faCheck,
-          text: 'Unless one burger ordered '
+          text: 'Unless one burger ordered ',
+          color: 'green'
         }
       ]
     },
@@ -58,11 +66,13 @@ export class OffersCarouselComponent implements OnInit {
       checklist: [
         {
           icon: faCheck,
-          text: 'Only on Weekends'
+          text: 'Only on Weekends',
+          color: 'green'
         },
         {
           icon: faTimes,
-          text: 'Order higher that $40'
+          text: 'Order higher that $40',
+          color: 'red'
         }
       ]
     }
