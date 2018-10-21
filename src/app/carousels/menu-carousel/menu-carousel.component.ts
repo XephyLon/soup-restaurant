@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { startWith, take, map } from 'rxjs/operators';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu-carousel',
@@ -11,6 +12,8 @@ import { startWith, take, map } from 'rxjs/operators';
 export class MenuCarouselComponent implements OnInit {
 
   @Input() name: string
+  faArrowRight = faArrowRight
+  faArrowLeft = faArrowLeft
   images = [
     'assets/images/menu-sample-burgers-1.jpg',
     'assets/images/menu-title-desserts-1.jpg',
@@ -22,7 +25,7 @@ export class MenuCarouselComponent implements OnInit {
 
   public carouselTileItems$: Observable<number[]>
   public carouselTileConfig: NguCarouselConfig = {
-    grid: { xs: 1, sm: 2, md: 3, lg: 3, all: 0 },
+    grid: { xs: 1, sm: 2, md: 2, lg: 3, all: 0 },
     speed: 550,
     point: { visible: true },
     touch: true,

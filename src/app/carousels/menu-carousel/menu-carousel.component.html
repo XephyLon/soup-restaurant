@@ -1,9 +1,10 @@
 <section>
+  <h2 class="muted">Our Menu</h2>
   <ngu-carousel #menuCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
       <ngu-tile class="item" *nguCarouselDef="let item">
         <div class="tile" [style.backgroundImage]="'url('+item+')'"></div>
       </ngu-tile>
-    <button NguCarouselPrev class="leftRs">&lt;</button>
-    <button NguCarouselNext class="rightRs">&gt;</button>
+    <button NguCarouselPrev class="leftRs"><fa-icon [icon]="faArrowLeft"></fa-icon></button>
+    <button NguCarouselNext class="rightRs"><fa-icon [icon]="faArrowRight"></fa-icon></button>
   </ngu-carousel>
 </section>
