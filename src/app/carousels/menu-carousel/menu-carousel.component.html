@@ -1,5 +1,5 @@
 <section>
-  <h2 class="muted">Our Menu</h2>
+  <h2>Our Menu</h2>
   <ngu-carousel #menuCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
       <ngu-tile class="item" *nguCarouselDef="let item">
         <div class="tile" [style.backgroundImage]="'url('+item+')'"></div>
