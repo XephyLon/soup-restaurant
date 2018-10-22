@@ -1,4 +1,5 @@
 @import '../../../_variables'
+@import '../../../_breakpoints'
 
 .menu-category
   // margin-bottom: 2rem
@@ -41,6 +42,19 @@
   z-index: 2
   margin-bottom: 0
 
+.panel-head
+  text-align: center
+  @include breakpoint(sm)
+    text-align: left
+
+.panel-options
+  text-align: center
+  &> span
+    @include breakpoint(xs)
+      display: block
+  &> button
+    @include breakpoint(xs)
+      width: 100%
 h2
   position: absolute
   bottom: 3rem

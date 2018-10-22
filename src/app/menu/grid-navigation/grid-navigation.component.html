@@ -23,13 +23,13 @@
             <div class="menu-category__content">
               <div *ngFor="let item of burgers" class="menu-item menu-list-item">
                 <div class="row align-items-center">
-                  <div class="col-sm-6 mb-2 mb-sm-0">
+                  <div class="col-sm-6 mb-2 mb-sm-0 panel-head">
                     <h6 class="mb-0"><a href="#">{{ item.name }}</a></h6>
                     <span class="muted text-sm">
                       <p>{{ item.ingredients }}</p>
                     </span>
                   </div>
-                  <div class="col-sm-6 text-sm-right">
+                  <div class="col-sm-6 text-sm-right panel-options">
                     <span class="text-md mr-4">
                       <span class="muted">From</span>
                       <span class="price"> $</span>
