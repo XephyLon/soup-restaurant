@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { NguCarouselConfig } from '@ngu/carousel';
 import { interval, Observable } from 'rxjs';
 import { startWith, take, map } from 'rxjs/operators';
@@ -11,7 +11,7 @@ import { startWith, take, map } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush
 
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
   @Input() name: string;
   images = [
     {title: 'Boscaiola Pasta', subTitle: 'New Product!', image: 'assets/images/slider-pasta-1.jpg'},
