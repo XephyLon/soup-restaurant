@@ -2,7 +2,7 @@
 <div class="global--page-title">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 offset-lg-4">
+      <div class="col-md-8 offset-md-4">
         <h1 class="mb-0">FAQ</h1>
         <h4 class="muted">Some information about our restaurant</h4>
       </div>
@@ -14,22 +14,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <nav class="side-nav pt-4">
+            <nav sticky class="side-nav pt-4">
               <h5>
                 <fa-icon class="mr-3" [icon]="faAlignJustify"></fa-icon>
                 Pick a content
               </h5>
               <!-- TODO: Loop through the sidenav -->
-              <ul class="nav nav--vertical">
-                <li class="nav-item">
-                  <a href="" class="nav--link">General</a>
-                  <ul>
-                    <li class="nav-item"><a class="nav-link sub-link" href="#">How does it work?</a></li>
-                    <li class="nav-item"><a class="nav-link sub-link" href="#">How long does it take</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
+                <ul #sideBar [class.sticky]="isToggled"  class="nav nav--vertical">
+                  <li *ngFor="let item of faqs" class="nav-item">
+                    <a href="" class="nav--link">{{ item.title }}</a>
+                    <ul>
+                      <li class="nav-item"><a class="nav-link sub-link" href="#">How does it work?</a></li>
+                      <li class="nav-item"><a class="nav-link sub-link" href="#">How long does it take</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
           </div>
 
           <!-- TODO: Remove Duplications. -->

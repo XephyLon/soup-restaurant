@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { LayoutModule } from '@angular/cdk/layout'
+import { LayoutModule } from '@angular/cdk/layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ParallaxModule, ParallaxConfig } from 'ngx-parallax'
-import { NguCarouselModule } from '@ngu/carousel'
+import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
+import { NguCarouselModule } from '@ngu/carousel';
+import { StickyModule } from 'ng2-sticky-kit';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -65,6 +66,7 @@ import { AccordionComponent } from './global/accordion/accordion.component';
     FontAwesomeModule,
     ParallaxModule,
     NguCarouselModule,
+    StickyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
