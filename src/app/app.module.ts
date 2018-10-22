@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
@@ -31,6 +31,16 @@ import { OffersCarouselComponent } from './carousels/offers-carousel/offers-caro
 import { BlogCarouselComponent } from './carousels/blog-carousel/blog-carousel.component';
 import { PanelComponent } from './global/accordion/panel/panel.component';
 import { AccordionComponent } from './global/accordion/accordion.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'about-us', component: AboutComponent },
+  { path: 'offers', component: SpecialOffersComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'book', component: BookATableComponent },
+  { path: 'menu', component: GridNavigationComponent },
+  { path: '', component: MainComponent }
+];
 
 @NgModule({
   declarations: [
@@ -61,6 +71,7 @@ import { AccordionComponent } from './global/accordion/accordion.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     LayoutModule,
     FontAwesomeModule,

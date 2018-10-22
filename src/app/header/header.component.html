@@ -14,12 +14,12 @@
           <span class="hamburger-inner"></span>
         </span>
         </button>
-        <nav>
-          <ul class="nav">
+        <nav [class.responsive-view]="isToggled">
+          <ul class="nav" [class.ul-responsive]="isToggled">
             <li *ngFor="let item of list" class="{{ item.class }}" >
               <div *ngIf="item.dropdownList; then dropdown else noDropdown"></div>
               <ng-template #dropdown><a href="">{{ item.name }} <span><img class="arrow" src="{{ arrowPath }}" alt="Arrow pointing down"></span></a></ng-template>
-              <ng-template #noDropdown><a href="">{{ item.name }} </a></ng-template>
+              <ng-template #noDropdown><a [routerLink]="item.router">{{ item.name }} </a></ng-template>
                 <div *ngIf="item.hasDropdown" class="dropdown-container">
                   <ul>
                     <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item">

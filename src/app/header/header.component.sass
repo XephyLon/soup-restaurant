@@ -17,8 +17,11 @@ header
   z-index: 999
 
 nav
-  display: none
+  opacity: 0
+  z-index: -100
   @include breakpoint (sm)
+    opacity: 1
+    z-index: 10
     display: inline-block
     line-height: 45px
     padding-top: 27.5px
@@ -39,6 +42,20 @@ ul
 
 img
   max-width: 150px
+
+.responsive-view
+  opacity: 1 !important
+  position: relative
+  top: 122px
+  font-size: 2rem
+  color: #FFF
+  z-index: 999 !important
+
+.ul-responsive
+  display: block
+  background-color: $main-dark
+  padding: 1rem 2rem
+  position: absolute
 
 .arrow
   width: 15px
