@@ -14,13 +14,13 @@
           <span class="hamburger-inner"></span>
         </span>
         </button>
-        <nav [class.responsive-view]="isToggled">
-          <ul class="nav" [class.ul-responsive]="isToggled">
-            <li *ngFor="let item of list" class="{{ item.class }}" >
+        <nav [class.dropdown-active]="isToggled" [ngClass]="!breakpoint? 'dropdown-container main-nav' : ''" >
+          <ul class="nav">
+            <li *ngFor="let item of list" class="{{ breakpoint? item.class : '' }}" >
               <div *ngIf="item.dropdownList; then dropdown else noDropdown"></div>
-              <ng-template #dropdown><a class="has-dropdown" (click)="isActive = !isActive">{{ item.name }} <span><img class="arrow" src="{{ arrowPath }}" alt="Arrow pointing down"></span></a></ng-template>
-              <ng-template #noDropdown><a [routerLink]="item.router" (click)="isActive = false; isToggled = false">{{ item.name }} </a></ng-template>
-                <div *ngIf="item.hasDropdown" class="dropdown-container" [class.dropdown-active]="isActive">
+              <ng-template #dropdown><a class="has-dropdown" [ngClass]="!breakpoint? 'dropdown-item': ''" (click)="isActive = !isActive">{{ item.name }} <span><img class="arrow" src="{{ arrowPath }}" alt="Arrow pointing down"></span></a></ng-template>
+              <ng-template #noDropdown><a [routerLink]="item.router" [ngClass]="!breakpoint? 'dropdown-item': ''" (click)="isActive = false; isToggled = false">{{ item.name }} </a></ng-template>
+                <div *ngIf="item.hasDropdown" class="dropdown-container" [ngClass]="isActive? 'dropdown-active inherit' : ''">
                   <ul>
                     <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item">
                       <a [routerLink]="dropdown.router" class="dropdown-item" (click)="isActive = false; isToggled = false">{{ dropdown.title }}</a>
