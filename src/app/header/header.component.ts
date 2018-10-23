@@ -13,13 +13,21 @@ export class HeaderComponent implements AfterContentInit {
   wrapper = document.getElementById('myContainer');
   breakpoint: boolean;
   isToggled: boolean;
+  isActive: boolean;
   faCartArrowDown = faCartArrowDown;
   logoPath = 'assets/logo.svg';
   arrowPath = 'assets/arrow-down.svg';
   cartPath = 'assets/shopping-cart.svg';
   list = [
     { class: 'menu-item', name: 'home', hasDropdown: false, router: '/'},
-    { class: 'menu-item', name: 'about', hasDropdown: false, router: '/about-us'},
+    { class: 'menu-item', name: 'about', hasDropdown: true, dropdownList: [
+      { title: 'about us', router: '/about-us' },
+      { title: 'services', router: '/services' },
+      { title: 'gallery', router: '/gallery' },
+      { title: 'reviews', router: '/reviews' },
+      { title: 'faq', router: '/faq' }
+    ]},
+
     { class: 'menu-item', name: 'menu', hasDropdown: false, router: '/menu'},
     { class: 'menu-item', name: 'offers', hasDropdown: false, router: '/offers'},
     { class: 'menu-item', name: 'contact', hasDropdown: false, router: '/contact'},

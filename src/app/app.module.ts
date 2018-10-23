@@ -39,6 +39,10 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'book', component: BookATableComponent },
   { path: 'menu', component: GridNavigationComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'reviews', component: ReviewsComponent },
+  { path: 'faq', component: FaqComponent },
   { path: '', component: MainComponent }
 ];
 
