@@ -1,6 +1,6 @@
 <div class="menu-category">
   <div class="menu-category__title collapse-toggle" [@extend]="opened" (click)="toggle.emit()">
-    <div class="global--bg-image" [ngStyle]="{'background-image': bgImage}"></div>
+    <div class="global--bg-image" [ngStyle]="{'background-image': 'url(' + bgImage + ')'}"></div>
     <h2>{{ title }}</h2>
   </div>
   <div class="panel-body" *ngIf="opened" [@slideInOut]="opened">

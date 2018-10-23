@@ -2,24 +2,25 @@ import { Component, AfterContentInit, ContentChildren, QueryList } from '@angula
 import { PanelComponent } from './panel/panel.component';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'ng-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.sass']
 })
 export class AccordionComponent implements AfterContentInit {
-  @ContentChildren(PanelComponent) panels: QueryList<PanelComponent>
+  @ContentChildren(PanelComponent) panels: QueryList<PanelComponent>;
 
   ngAfterContentInit(): void {
     this.panels.toArray().forEach((panel: PanelComponent) => {
-      panel.toggle.subscribe(() => { this.openPanel(panel) })
-    })
+      panel.toggle.subscribe(() => { this.openPanel(panel); });
+    });
   }
 
   openPanel(panel: PanelComponent) {
     this.panels.toArray().forEach(p => {
-      p.opened = false
-    })
-    panel.opened = true
+      p.opened = false;
+    });
+    panel.opened = true;
   }
 
   constructor() { }
