@@ -10,7 +10,6 @@ export class AccordionComponent implements AfterContentInit {
   @ContentChildren(PanelComponent) panels: QueryList<PanelComponent>
 
   ngAfterContentInit(): void {
-    this.panels.toArray()[0].opened = true
     this.panels.toArray().forEach((panel: PanelComponent) => {
       panel.toggle.subscribe(() => { this.openPanel(panel) })
     })
