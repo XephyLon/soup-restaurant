@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 export class GridNavigationComponent {
 
   menus = [
-    { name: 'Burgers', image: '../../../assets/images/menu-title-burgers-1.jpg' },
-    { name: 'Pasta', image: '../../../assets/images/menu-title-pasta-1.jpg' },
-    { name: 'Pizza', image: '../../../assets/images/menu-title-pizza-1.jpg' },
-    { name: 'Sushi', image: '../../../assets/images/menu-title-sushi-1.jpg' },
-    { name: 'Desserts', image: '../../../assets/images/menu-title-desserts-1.jpg' },
-    { name: 'Drinks', image: '../../../assets/images/menu-title-drinks-1.jpg' }
+    { name: 'Burgers', image: 'assets/images/menu-title-burgers-1.jpg' },
+    { name: 'Pasta', image: 'assets/images/menu-title-pasta-1.jpg' },
+    { name: 'Pizza', image: 'assets/images/menu-title-pizza-1.jpg' },
+    { name: 'Sushi', image: 'assets/images/menu-title-sushi-1.jpg' },
+    { name: 'Desserts', image: 'assets/images/menu-title-desserts-1.jpg' },
+    { name: 'Drinks', image: 'assets/images/menu-title-drinks-1.jpg' }
   ];
 
   burgers = [
