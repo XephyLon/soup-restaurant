@@ -19,11 +19,11 @@
             <li *ngFor="let item of list" class="{{ item.class }}" >
               <div *ngIf="item.dropdownList; then dropdown else noDropdown"></div>
               <ng-template #dropdown><a class="has-dropdown" (click)="isActive = !isActive">{{ item.name }} <span><img class="arrow" src="{{ arrowPath }}" alt="Arrow pointing down"></span></a></ng-template>
-              <ng-template #noDropdown><a [routerLink]="item.router">{{ item.name }} </a></ng-template>
+              <ng-template #noDropdown><a [routerLink]="item.router" (click)="isActive = false; isToggled = false">{{ item.name }} </a></ng-template>
                 <div *ngIf="item.hasDropdown" class="dropdown-container" [class.dropdown-active]="isActive">
                   <ul>
                     <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item">
-                      <a [routerLink]="dropdown.router" class="dropdown-item" (click)="isActive = false">{{ dropdown.title }}</a>
+                      <a [routerLink]="dropdown.router" class="dropdown-item" (click)="isActive = false; isToggled = false">{{ dropdown.title }}</a>
                     </li>
                   </ul>
                 </div>
