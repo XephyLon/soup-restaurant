@@ -31,20 +31,7 @@ import { OffersCarouselComponent } from './carousels/offers-carousel/offers-caro
 import { BlogCarouselComponent } from './carousels/blog-carousel/blog-carousel.component';
 import { PanelComponent } from './global/accordion/panel/panel.component';
 import { AccordionComponent } from './global/accordion/accordion.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const appRoutes: Routes = [
-  { path: 'about-us', component: AboutComponent },
-  { path: 'offers', component: SpecialOffersComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'book', component: BookATableComponent },
-  { path: 'menu', component: GridNavigationComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'reviews', component: ReviewsComponent },
-  { path: 'faq', component: FaqComponent },
-  { path: '', component: MainComponent }
-];
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -75,7 +62,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule,
     AppRoutingModule,
     LayoutModule,
     FontAwesomeModule,
