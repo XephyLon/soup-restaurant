@@ -44,6 +44,9 @@ ul
 img
   max-width: 150px
 
+.absolute
+  position: absolute !important
+
 .responsive-view
   opacity: 1 !important
   position: relative
@@ -122,13 +125,16 @@ img
   line-height: 30px
 
 .inherit
-  position: inherit !important
+  position: inherit
 
 .main-nav
   top: calc(100% + 8rem) !important
 
 .has-dropdown
   cursor: pointer
+  &:hover
+    color: $primary !important
+    transform: all .25s ease-out
 
 .dropdown-active
   visibility: visible
@@ -138,6 +144,10 @@ img
 .dropdown-item
   width: 200px
   border-bottom: 1px solid $light-bgc
+  &:hover
+    color: $primary !important
+    transform: all .25s ease-out
+    background-color: $light-bgc
 
 
 

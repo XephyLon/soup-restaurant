@@ -20,7 +20,7 @@
               <div *ngIf="item.dropdownList; then dropdown else noDropdown"></div>
               <ng-template #dropdown><a class="has-dropdown" [ngClass]="!breakpoint? 'dropdown-item': ''" (click)="isActive = !isActive">{{ item.name }} <span><img class="arrow" src="{{ arrowPath }}" alt="Arrow pointing down"></span></a></ng-template>
               <ng-template #noDropdown><a [routerLink]="item.router" [ngClass]="!breakpoint? 'dropdown-item': ''" (click)="isActive = false; isToggled = false">{{ item.name }} </a></ng-template>
-                <div *ngIf="item.hasDropdown" class="dropdown-container" [ngClass]="isActive? 'dropdown-active inherit' : ''">
+                <div *ngIf="item.hasDropdown" class="dropdown-container" [class.absolute]="breakpoint" [ngClass]="isActive? 'dropdown-active inherit' : ''">
                   <ul>
                     <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item">
                       <a [routerLink]="dropdown.router" class="dropdown-item" (click)="isActive = false; isToggled = false">{{ dropdown.title }}</a>

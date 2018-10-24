@@ -8,6 +8,9 @@
 @import "_variables"
 @import "_breakpoints"
 
+*:focus
+  outline: none
+
 
 html
   font-size: 14px
@@ -46,6 +49,7 @@ a
 
   &:hover
     color: $primary
+    transition: all .25s ease-out
     text-decoration: none
 
 li
@@ -75,8 +79,13 @@ img
 
 .btn-primary
   border-color: $primary
-  background: $primary
+  background-color: $primary
   color: #FFF
+  &:hover, &:focus, &:active
+    background-color: $main-dark !important
+    border-color: $primary !important
+    outline-color: $primary !important
+    box-shadow: none !important
 
 
 
@@ -93,6 +102,11 @@ img
 .btn-outline-primary
   color: $primary
   border: 1px solid $primary
+  &:hover, &:focus, &:active
+    background-color: $primary !important
+    outline-color: $main-dark !important
+    border-color: $main-dark !important
+    box-shadow: none !important
 
 
   &:hover
