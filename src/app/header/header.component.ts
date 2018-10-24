@@ -1,4 +1,4 @@
-import { Component, AfterContentInit } from '@angular/core';
+import { Component, AfterContentInit, Input } from '@angular/core';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
@@ -10,10 +10,9 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class HeaderComponent implements AfterContentInit {
 
   constructor (public breakpointObserver: BreakpointObserver) {}
-  wrapper = document.getElementById('myContainer');
+  isActive: boolean;
   breakpoint: boolean;
   isToggled: boolean;
-  isActive: boolean;
   faCartArrowDown = faCartArrowDown;
   logoPath = 'assets/logo.svg';
   arrowPath = 'assets/arrow-down.svg';
