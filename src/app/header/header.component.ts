@@ -1,4 +1,4 @@
-import { Component, AfterContentInit, Input } from '@angular/core';
+import { Component, AfterContentInit } from '@angular/core';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 

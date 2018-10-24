@@ -22,7 +22,7 @@
               <ng-template #noDropdown><a [routerLink]="item.router" [ngClass]="!breakpoint? 'dropdown-item': ''" (click)="isActive = false; isToggled = false">{{ item.name }} </a></ng-template>
                 <div *ngIf="item.hasDropdown" class="dropdown-container" [class.absolute]="breakpoint" [ngClass]="isActive? 'dropdown-active inherit' : ''">
                   <ul>
-                    <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item">
+                    <li *ngFor="let dropdown of item.dropdownList" class="menu-item list-item mr-0">
                       <a [routerLink]="dropdown.router" class="dropdown-item" (click)="isActive = false; isToggled = false">{{ dropdown.title }}</a>
                     </li>
                   </ul>
