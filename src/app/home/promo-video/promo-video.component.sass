@@ -11,34 +11,36 @@ section
   position: relative
   color: #FFF
 
-fa-icon
-  color: #FFF
-
 button
   padding: 0
-  border: 1px solid #FFF
+  color: #FFF
+  border: 2px solid #FFF
   background-color: transparent
   outline: none
   cursor: pointer
   position: relative
   display: inline-block
-  font-size: 3.25rem
+  font-size: 1.25rem
   width: 92px
   height: 92px
   border-radius: 50%
+  &:hover
+    background-color: #fff
+    transition: all .25s ease-out
+    color: #000
 
 h2
   margin-bottom: 1rem
   font-weight: 100
   font-size: 2rem
   @include breakpoint(md)
-    font-size: 3.5rem
+    font-size: 3rem
 
 h5
   font-size: 1rem
-  font-weight: 300
+  font-weight: 200
   @include breakpoint(md)
-    font-size: 2.5rem
+    font-size: 1.4rem
 
 .promo
 

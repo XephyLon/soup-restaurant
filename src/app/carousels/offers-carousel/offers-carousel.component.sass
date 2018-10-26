@@ -17,10 +17,8 @@ button
   z-index: 5
 
 section
+  background-color: $light-bgc
   position: relative
-  padding: 2rem 0
-  @include breakpoint(md)
-    padding: 5rem 0
 
 ul
   padding-inline-start: 15px
@@ -58,15 +56,15 @@ ngu-carousel
     padding: 5rem 0
 
   &__image
-    width: 100%
-    height: auto
+    position: relative
+    width: 50%
     z-index: 0
 
   &__check-list
     margin-bottom: 0
     font-size: 1.3rem
     @include breakpoint(lg)
-      font-size: 1.9rem
+      font-size: 1.4rem
       font-weight: 300
 
     &> li
@@ -74,36 +72,37 @@ ngu-carousel
 
 
   &__content
+    height: auto
     padding: 25px
-    position: absolute
+    position: relative
     background-color: #FFF
     line-height: 1
     z-index: 2
-    box-shadow: -9px 10px 12px -2px rgba(0,0,0,0.43)
-    bottom: 3%
-    right: -5%
-    @include breakpoint(sm)
-      width: 65%
-      top: 28%
-      bottom: 28%
-      right: 40px
+    // bottom: 3%
+    // right: -5%
     @include breakpoint(lg)
-      top: 15%
-      bottom: 15%
+      align-self: flex-start
+      position: relative
+      width: 55%
+      margin-left: -5%
+      margin-top: 5%
+      float: left
+      background-color: #FFF
+      padding: 4rem
+      z-index: 2
     &> h2
-      margin-bottom: 1rem
       font-size: 2.4rem
       font-weight: 100
       @include breakpoint(xs)
         font-size: 2rem
       @include breakpoint(lg)
-        font-size: 4.4rem
+        font-size: 3rem
 
     &> h5
-      font-size: 1.5rem
+      font-size: 1rem
       font-weight: 100
       margin-bottom: 3rem
       @include breakpoint(lg)
-        font-size: 2.5rem
+        font-size: 1.3rem
 
 // End of temporary rules

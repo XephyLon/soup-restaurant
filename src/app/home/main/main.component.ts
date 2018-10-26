@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
   public carouselTileItems$: Observable<number[]>;
   public carouselTileConfig: NguCarouselConfig = {
     grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
-    speed: 500,
+    speed: 1500,
     point: {
       visible: true
     },
