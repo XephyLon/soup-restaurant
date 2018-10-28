@@ -24,9 +24,11 @@ section
   padding: 2rem 0
   overflow: visible
   @include breakpoint(md)
-    padding: 5rem 0
+    padding-top: 5rem
+    padding-bottom: 0
 
-.tile
+.tile:hover
+  animation: zooming 18s infinite both
 
 button
   font-size: 1rem
@@ -61,3 +63,7 @@ button
 ngu-carousel
   background-color: #FFF
   height: 500px
+
+ngu-tile
+  animation: zooming 18s infinite both
+

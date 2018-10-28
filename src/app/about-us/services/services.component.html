@@ -11,10 +11,12 @@
   <div class="clearfix">
     <div class="container-fluid">
       <div *ngFor="let service of serviceList; let i = index" class="row service">
-            <div class="col-md-4" [class.second]="isEven(i)">
+            <div class="col-md-4 service__content" [class.second]="isEven(i)">
               <h2>{{ service.title }}</h2>
               <p>{{ service.text }}</p>
-              <a href="" class="btn btn-outline-primary">Book Service</a>
+              <div class="service__button">
+                <a href="" class="btn btn-outline-primary">Book Service</a>
+              </div>
             </div>
             <div class=" col-md-8" [class.first]="isEven(i)">
               <div class="bg-image" [ngStyle]="service.image"></div>
@@ -22,4 +24,5 @@
       </div>
     </div>
   </div>
+  <app-parallax-footer></app-parallax-footer>
 </section>

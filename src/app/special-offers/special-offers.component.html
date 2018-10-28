@@ -14,45 +14,16 @@
 <!-- Basic markup for the meal component -->
 <section>
   <div class="container">
-    <div class="row special-offer">
-      <div class="row col-md-8 special-offer__image">
-        <img src="{{ offerImage }}" alt="">
-      </div>
-      <div class="row col-md-6 offset-md-6 special-offer__content">
-        <h2><a href="#">Chip Friday</a></h2>
-        <h5 class="muted">10% Off for all dishes!</h5>
+    <div *ngFor="let item of offers" class="row flex-nowrap special-offer">
+      <img width="600" height="420" [src]="item.image" class="special-offer__image">
+      <div class="special-offer__content">
+        <h2 class="mb-2"><a href="#">{{ item.title }}</a></h2>
+        <h5 class="muted">{{ item.subTitle }}</h5>
         <ul class="special-offer__check-list">
-          <li><fa-icon [icon]="faCheck"></fa-icon> Only on Friday</li>
-          <li><fa-icon [icon]="faCheck"></fa-icon> All products</li>
-          <li><fa-icon [icon]="faCheck"></fa-icon> Online order</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row special-offer">
-      <div class="row col-md-8 special-offer__image">
-        <img src="{{ offerImage }}" alt="">
-      </div>
-      <div class="row col-md-6 offset-md-6 special-offer__content">
-        <h2><a href="#">Chip Friday</a></h2>
-        <h5 class="muted">10% Off for all dishes!</h5>
-        <ul class="special-offer__check-list">
-          <li><fa-icon [icon]="faCheck"></fa-icon> Only on Friday</li>
-          <li><fa-icon [icon]="faCheck"></fa-icon> All products</li>
-          <li><fa-icon [icon]="faCheck"></fa-icon> Online order</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row special-offer">
-      <div class="row col-md-8 special-offer__image">
-        <img src="{{ offerImage }}" alt="">
-      </div>
-      <div class="row col-md-6 offset-md-6 special-offer__content">
-        <h2><a href="#">Chip Friday</a></h2>
-        <h5 class="muted">10% Off for all dishes!</h5>
-        <ul class="special-offer__check-list">
-          <li><fa-icon [icon]="faCheck"></fa-icon> Only on Friday</li>
-          <li><fa-icon [icon]="faCheck"></fa-icon> All products</li>
-          <li><fa-icon [icon]="faCheck"></fa-icon> Online order</li>
+          <!-- TODO: Apply colors dynamically -->
+          <li *ngFor="let checks of item.checklist">
+            <fa-icon [icon]="checks.icon" [ngClass]="checks.color"></fa-icon> {{ checks.text }}
+          </li>
         </ul>
       </div>
     </div>

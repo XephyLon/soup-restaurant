@@ -32,6 +32,7 @@ import { BlogCarouselComponent } from './carousels/blog-carousel/blog-carousel.c
 import { PanelComponent } from './global/accordion/panel/panel.component';
 import { AccordionComponent } from './global/accordion/accordion.component';
 import { RouterModule } from '@angular/router';
+import { ParallaxFooterComponent } from './global/parallax-footer/parallax-footer.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { RouterModule } from '@angular/router';
     BlogCarouselComponent,
     PanelComponent,
     AccordionComponent,
+    ParallaxFooterComponent,
   ],
   imports: [
     BrowserModule,
