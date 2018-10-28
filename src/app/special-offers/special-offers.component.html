@@ -14,7 +14,7 @@
 <!-- Basic markup for the meal component -->
 <section>
   <div class="container">
-    <div *ngFor="let item of offers" class="row flex-nowrap special-offer">
+    <div *ngFor="let item of offers" class="row flex-sm-wrap special-offer">
       <img width="600" height="420" [src]="item.image" class="special-offer__image">
       <div class="special-offer__content">
         <h2 class="mb-2"><a href="#">{{ item.title }}</a></h2>

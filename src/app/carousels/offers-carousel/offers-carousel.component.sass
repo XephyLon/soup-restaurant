@@ -57,8 +57,10 @@ ngu-carousel
 
   &__image
     position: relative
-    width: 50%
+    width: 100%
     z-index: 0
+    @include breakpoint(sm)
+      width: 50%
 
   &__check-list
     margin-bottom: 0
@@ -72,6 +74,7 @@ ngu-carousel
 
 
   &__content
+    width: 100%
     height: auto
     padding: 25px
     position: relative

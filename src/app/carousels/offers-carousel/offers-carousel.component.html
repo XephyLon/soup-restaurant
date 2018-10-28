@@ -2,7 +2,7 @@
   <div class="container">
     <ngu-carousel #offersCarousel [inputs]="carouselTileConfig" [dataSource]="carouselTileItems$ | async">
       <ngu-tile class="item" *nguCarouselDef="let item">
-          <div class="row flex-nowrap special-offer">
+          <div class="row flex-sm-wrap special-offer">
             <img width="600" height="420" [src]="item.image" class="special-offer__image">
             <div class="special-offer__content">
               <h2 class="mb-2"><a href="#">{{ item.title }}</a></h2>

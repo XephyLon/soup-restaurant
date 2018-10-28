@@ -77,7 +77,7 @@ img
   font-family: "Oswald", sans-serif
 
 .btn-primary
-  border-color: $primary
+  border: none
   background-color: $primary
   color: #FFF
   &:before
@@ -106,12 +106,11 @@ img
   color: $main-dark
   border: 1px solid $main-dark
   &:before
-    background: $primary
+    background: $main-dark
   &:hover
     background-color: transparent
     color: #FFF
-    border: 1px solid #FFF
-    background: $main-dark
+    border: 1px solid $main-dark
 
 
 .btn-outline-primary
@@ -161,8 +160,11 @@ img
       text-align: left
 
   & h4
+    text-align: center
     font-size: 1.75rem
     font-weight: 300
+    @include breakpoint(sm)
+      text-align: left
 
 .global--bg-image
   position: absolute
