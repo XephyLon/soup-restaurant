@@ -80,8 +80,22 @@ img
   border-color: $primary
   background-color: $primary
   color: #FFF
+  &:before
+    background: $main-dark
   &:hover, &:focus, &:active
-    background-color: $main-dark !important
+    background-color: $primary
+    border-color: $main-dark !important
+    outline-color: $main-dark !important
+    box-shadow: none !important
+
+.btn-secondary
+  border-color: $main-dark
+  background-color: $main-dark
+  color: #FFF
+  &:before
+    background: $primary
+  &:hover, &:focus, &:active
+    background-color: $main-dark
     border-color: $primary !important
     outline-color: $primary !important
     box-shadow: none !important
@@ -91,8 +105,10 @@ img
 .btn-outline-secondary
   color: $main-dark
   border: 1px solid $main-dark
-
+  &:before
+    background: $primary
   &:hover
+    background-color: transparent
     color: #FFF
     border: 1px solid #FFF
     background: $main-dark
@@ -101,12 +117,13 @@ img
 .btn-outline-primary
   color: $primary
   border: 1px solid $primary
+  &:before
+    background: $primary
   &:hover, &:focus, &:active
-    background-color: $primary !important
+    background-color: transparent
     outline-color: $main-dark !important
     border-color: $main-dark !important
     box-shadow: none !important
-
 
   &:hover
     color: #FFF
@@ -176,7 +193,6 @@ img
   left: 0
   right: 0
   bottom: 0
-  background: $primary
   transform: scaleY(0)
   transform-origin: 50% 100%
   transition-property: transform

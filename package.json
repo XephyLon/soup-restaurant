@@ -42,6 +42,7 @@
     "rxjs": "~6.3.3",
     "tiny-slider": "^2.8.7",
     "ui-carousel": "^0.2.0",
+    "vanilla-back-to-top": "^7.1.14",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

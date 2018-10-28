@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
@@ -70,7 +70,7 @@ import { ParallaxFooterComponent } from './global/parallax-footer/parallax-foote
     FontAwesomeModule,
     ParallaxModule,
     NguCarouselModule,
-    StickyModule
+    StickyModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
