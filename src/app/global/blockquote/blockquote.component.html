@@ -1,0 +1,12 @@
+<blockquote data-aos="fade-down" class="block-quote block-quote--right">
+  <div class="block-quote__content block-quote__content--light">
+    <app-rating></app-rating>
+    <p class="block-quote__paragraph"><ng-content></ng-content></p>
+  </div>
+  <footer class="block-quote__footer">
+    <img class="avatar" [src]="image" [alt]="author">
+    <span>
+      {{ author }} <span class="muted">{{ service }}</span>
+    </span>
+  </footer>
+</blockquote>

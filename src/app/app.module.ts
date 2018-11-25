@@ -33,6 +33,8 @@ import { PanelComponent } from './global/accordion/panel/panel.component';
 import { AccordionComponent } from './global/accordion/accordion.component';
 import { RouterModule } from '@angular/router';
 import { ParallaxFooterComponent } from './global/parallax-footer/parallax-footer.component';
+import { BlockquoteComponent } from './global/blockquote/blockquote.component';
+import { RatingComponent } from './global/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { ParallaxFooterComponent } from './global/parallax-footer/parallax-foote
     PanelComponent,
     AccordionComponent,
     ParallaxFooterComponent,
+    BlockquoteComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
