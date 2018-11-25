@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
+import { ParallaxConfig, ParallaxModule } from 'ngx-parallax';
 import { NguCarouselModule } from '@ngu/carousel';
 import { StickyModule } from 'ng2-sticky-kit';
 
@@ -34,7 +34,7 @@ import { AccordionComponent } from './global/accordion/accordion.component';
 import { RouterModule } from '@angular/router';
 import { ParallaxFooterComponent } from './global/parallax-footer/parallax-footer.component';
 import { BlockquoteComponent } from './global/blockquote/blockquote.component';
-import { RatingComponent } from './global/rating/rating.component';
+import { RatingComponent } from './shared/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +63,7 @@ import { RatingComponent } from './global/rating/rating.component';
     AccordionComponent,
     ParallaxFooterComponent,
     BlockquoteComponent,
-    RatingComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +74,7 @@ import { RatingComponent } from './global/rating/rating.component';
     FontAwesomeModule,
     ParallaxModule,
     NguCarouselModule,
-    StickyModule,
+    StickyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
