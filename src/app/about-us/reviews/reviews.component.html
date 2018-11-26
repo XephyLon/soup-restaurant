@@ -17,14 +17,15 @@
         <div class="container">
           <div class="row mb-3">
             <div class="col-xl-8 offset-xl-2">
-              <!-- TODO: Prepare for backend implementation -->
               <app-blockquote *ngFor="let quote of quotes.slice(0, 7); even as isEven"
                 [author]="quote.author"
                 [image]="quote.image"
                 [rating]="quote.rating"
                 [service]="quote.service"
                 [theme]="isEven ? 'light' : 'dark'"
-                [direction]="isEven ? 'right' : 'left'" >{{ quote.quote }}</app-blockquote>
+                [direction]="isEven ? 'right' : 'left'" >
+                {{ quote.quote }}
+              </app-blockquote>
             </div>
           </div>
         </div>
