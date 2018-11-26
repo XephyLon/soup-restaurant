@@ -6,6 +6,7 @@
 @import "animate.css"
 @import 'aos/dist/aos.css'
 @import "tiny-slider/dist/tiny-slider.css"
+@import '~css-star-rating/scss/star-rating'
 @import "_variables"
 @import "_breakpoints"
 
@@ -129,6 +130,9 @@ img
     border: 1px solid #FFF
     background-color: $primary
 
+.active
+  color: $active
+
 .hr-md
   margin: 2rem 0
 
@@ -139,7 +143,7 @@ img
   float: right
 
 .muted
-  color: #a4a7a9
+  color: $muted
 
 .light
   background-color: $light-bgc
@@ -213,3 +217,20 @@ img
   & .zoom
     background-repeat: no-repeat !important
     background-size: cover !important
+
+.star
+  font-size: .8rem !important
+  margin-right: 1rem !important
+  @include breakpoint(sm)
+    margin-bottom: 3rem !important
+  &-container
+    align-self: left
+
+.rating
+  justify-content: end
+
+.rating.color-default .star-container .star
+  svg
+    fill: $active !important
+  i
+    color: $active !important

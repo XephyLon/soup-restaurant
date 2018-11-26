@@ -18,7 +18,11 @@
           <div class="row mb-3">
             <div class="col-xl-8 offset-xl-2">
               <!-- TODO: Prepare for backend implementation -->
-              <app-blockquote></app-blockquote>
+              <app-blockquote *ngFor="let quote of quotes"
+                [author]="quote.author"
+                [image]="quote.image"
+                [rating]="quote.rating"
+                [service]="quote.service" >{{ quote.quote }}</app-blockquote>
             </div>
           </div>
         </div>

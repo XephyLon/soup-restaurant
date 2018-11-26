@@ -3,4 +3,5 @@ export interface BlockQuote {
   author: string
   service: string
   quote: string
+  rating: number
 }

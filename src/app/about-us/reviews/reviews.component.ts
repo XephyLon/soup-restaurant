@@ -1,5 +1,6 @@
+import { BlockQuote } from './../../shared/blockquote.model';
+import { BlockquotesService } from './../../shared/blockquotes.service';
 import { Component, OnInit } from '@angular/core';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-reviews',
@@ -7,10 +8,17 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./reviews.component.sass']
 })
 export class ReviewsComponent implements OnInit {
-  faStar = faStar;
-  constructor() { }
+  quotes: Array<BlockQuote> = []
 
-  ngOnInit() {
+  constructor(private blockquotesService: BlockquotesService) {}
+
+  ngOnInit(): void {
+    this.blockquotesService.getQuotes()
+      .then(quotes => {
+        this.quotes = quotes;
+        console.log(this.quotes);
+      })
+
   }
 
 }

@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ParallaxConfig, ParallaxModule } from 'ngx-parallax';
 import { NguCarouselModule } from '@ngu/carousel';
 import { StickyModule } from 'ng2-sticky-kit';
+import { StarRatingModule } from 'angular-star-rating'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +35,6 @@ import { AccordionComponent } from './global/accordion/accordion.component';
 import { RouterModule } from '@angular/router';
 import { ParallaxFooterComponent } from './global/parallax-footer/parallax-footer.component';
 import { BlockquoteComponent } from './global/blockquote/blockquote.component';
-import { RatingComponent } from './shared/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -62,8 +62,7 @@ import { RatingComponent } from './shared/rating/rating.component';
     PanelComponent,
     AccordionComponent,
     ParallaxFooterComponent,
-    BlockquoteComponent,
-    RatingComponent
+    BlockquoteComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +73,8 @@ import { RatingComponent } from './shared/rating/rating.component';
     FontAwesomeModule,
     ParallaxModule,
     NguCarouselModule,
-    StickyModule
+    StickyModule,
+    StarRatingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
