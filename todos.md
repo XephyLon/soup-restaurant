@@ -6,7 +6,7 @@
 
 <!-- Make a carousel component. -->
 
-The freaking responsive design!
+<!-- The freaking responsive design! -->
 
 <!-- Style the carousel component -->
 
@@ -25,7 +25,7 @@ Make the page title a separate component
 
 Make page heading a reusable component.
 
-Make comment bubbles reusable.
+<!-- Make comment bubbles reusable. -->
 
 Make parallax footer reusable.
 
