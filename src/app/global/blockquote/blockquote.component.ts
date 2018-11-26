@@ -10,6 +10,8 @@ export class BlockquoteComponent implements OnInit {
   @Input() public author: string
   @Input() public service: string
   @Input() public rating: number
+  @Input() public theme: string
+  @Input() public direction: string
 
   ngOnInit(): void {
   }

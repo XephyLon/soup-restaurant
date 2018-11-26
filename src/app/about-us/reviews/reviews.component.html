@@ -18,19 +18,19 @@
           <div class="row mb-3">
             <div class="col-xl-8 offset-xl-2">
               <!-- TODO: Prepare for backend implementation -->
-              <app-blockquote *ngFor="let quote of quotes"
+              <app-blockquote *ngFor="let quote of quotes.slice(0, 7); even as isEven"
                 [author]="quote.author"
                 [image]="quote.image"
                 [rating]="quote.rating"
-                [service]="quote.service" >{{ quote.quote }}</app-blockquote>
+                [service]="quote.service"
+                [theme]="isEven ? 'light' : 'dark'"
+                [direction]="isEven ? 'right' : 'left'" >{{ quote.quote }}</app-blockquote>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="row-fluid">
-      <!-- Reserved for Parallax Footer Component -->
-     <!-- <div parallax [config]="{initialValue: 0, ratio: .2}" class="image"></div> -->
     <div class="footer">
       <div parallax [config]="{initialValue: -350, ratio: .2}" class="footer__image"></div>
       <div class="container">
@@ -43,7 +43,6 @@
         </div>
       </div>
     </div>
-
     </div>
   </article>
 </div>

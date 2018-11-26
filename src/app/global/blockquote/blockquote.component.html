@@ -1,7 +1,9 @@
-<blockquote data-aos="fade-down" class="block-quote block-quote--right">
-  <div class="block-quote__content block-quote__content--dark">
-    <star-rating [readOnly]="true" rating="{{rating}}" starType=svg [staticColor]="'default'"></star-rating>
-    <p class="block-quote__paragraph"><ng-content></ng-content></p>
+<blockquote data-aos="fade-down" class="block-quote block-quote--{{ direction }}">
+  <div class="block-quote__content block-quote__content--{{ theme }}">
+    <star-rating [readOnly]="true" [rating]="rating" starType=svg [staticColor]="'default'" size="medium"></star-rating>
+    <p class="block-quote__paragraph">
+      <ng-content></ng-content>
+    </p>
   </div>
   <footer class="block-quote__footer">
     <img class="avatar" [src]="image" [alt]="author">
