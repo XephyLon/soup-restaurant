@@ -6,55 +6,25 @@
           <div class="bg-image"></div>
         </div>
         <div class="col-lg-5 col-md-9">
-          <div class="rate muted mt-5">
-            <fa-icon [icon]="faStar" class="active"></fa-icon>
-            <fa-icon [icon]="faStar" class="active"></fa-icon>
-            <fa-icon [icon]="faStar" class="active"></fa-icon>
-            <fa-icon [icon]="faStar" class="active"></fa-icon>
-            <fa-icon [icon]="faStar"></fa-icon>
-          </div>
+          <star-rating
+            [rating]="4"
+            [readOnly]="true"
+            [starType]="'svg'"
+            [staticColor]="'default'"></star-rating>
           <h1>
             The best food in London!
           </h1>
           <p class="muted lead mb-5">
             Donec a eros metus. Vivamus volutpat leo dictum risus ullamcorper condimentum. Cras sollicitudin varius condimentum. Praesent a dolor sem....
           </p>
-          <blockquote data-aos="fade-right" class="block-quote block-quote--right" >
-            <div class="block-quote__content block-quote__content--light">
-              <div class="rate muted rate--sm">
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar"></fa-icon>
-              </div>
-              <p class="block-quote__paragraph">It was an amazing feeling for my belly!</p>
-            </div>
-            <footer class="block-quote__footer">
-              <img class="avatar" src="http://www.gravatar.com/avatar/3472757f6a3732d6470f98d7d7e9cece?s=32" alt="Mark Johnson">
-              <span>
-                Mark Johnson <span class="muted">Google</span>
-              </span>
-            </footer>
-          </blockquote>
-          <blockquote data-aos="fade-left" class="block-quote block-quote--left">
-            <div class="block-quote__content block-quote__content--dark">
-              <div class="rate muted rate--sm">
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar" class="active"></fa-icon>
-                <fa-icon [icon]="faStar"></fa-icon>
-              </div>
-              <p class="block-quote__paragraph">It was an amazing feeling for my belly!</p>
-            </div>
-            <footer class="block-quote__footer">
-              <img class="avatar" src="http://www.gravatar.com/avatar/3472757f6a3732d6470f98d7d7e9cece?s=32" alt="Mark Johnson">
-              <span>
-                Mark Johnson <span class="muted">Google</span>
-              </span>
-            </footer>
-          </blockquote>
+          <app-blockquote
+            *ngFor="let quote of quotes.slice(0, 2); even as isEven"
+            [author]="quote.author"
+            [image]="quote.image"
+            [rating]="quote.rating"
+            [service]="quote.service"
+            [theme]="isEven? 'light' : 'dark'"
+            [direction]="isEven? 'right' : 'left'"> {{ quote.quote }} </app-blockquote>
         </div>
       </div>
     </div>
