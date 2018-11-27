@@ -15,7 +15,7 @@ export class ServicesComponent {
     { title: 'Weddings', text: this.description, image: { 'background-image': "url('assets/images/service-weddings.jpg')" } }
   ]
 
-  isEven(index) {
+  isEven(index): boolean {
     if (index % 2 === 0 || index === 0) {
       return false
     } else {

@@ -35,6 +35,7 @@ import { AccordionComponent } from './global/accordion/accordion.component';
 import { RouterModule } from '@angular/router';
 import { ParallaxFooterComponent } from './global/parallax-footer/parallax-footer.component';
 import { BlockquoteComponent } from './global/blockquote/blockquote.component';
+import { PageTitleComponent } from './shared/page-title/page-title.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { BlockquoteComponent } from './global/blockquote/blockquote.component';
     PanelComponent,
     AccordionComponent,
     ParallaxFooterComponent,
-    BlockquoteComponent
+    BlockquoteComponent,
+    PageTitleComponent
   ],
   imports: [
     BrowserModule,

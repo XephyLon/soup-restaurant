@@ -1,0 +1,14 @@
+<div class="content {{ theme }}">
+  <div
+    *ngIf="ptParallax"
+    parallax [config]="{initialValue: 0, ratio: .2}"
+    class="image" [ngStyle]="{'backgroundImage': 'url('+image+')'}"></div>
+  <div class="container global--page-title">
+    <div class="row">
+      <div class="col-md-8 offset-md-4">
+        <h1 class="mb-0"> {{ title }} </h1>
+        <h4 class="muted"><ng-content></ng-content></h4>
+      </div>
+    </div>
+  </div>
+</div>

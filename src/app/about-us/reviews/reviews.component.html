@@ -1,14 +1,8 @@
-<div class="content">
-  <div parallax [config]="{initialValue: 0, ratio: .2}" class="image"></div>
-  <div class="container global--page-title">
-    <div class="row">
-      <div class="col-md-8 offset-md-4">
-        <h1 class="no-mb">Reviews</h1>
-        <h4 class="muted">Some information about our site</h4>
-      </div>
-    </div>
-  </div>
-</div>
+<app-page-title
+  [title]="'Reviews'"
+  [ptParallax]="true"
+  [image]="'assets/images/bg-croissant-1.jpg'"
+  [theme]="'dark'">Some Information About Our Restaurant</app-page-title>
 
 <div class="clearfix">
   <article>
