@@ -1,3 +1,4 @@
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from "@angular/core";
 import { SpecialOffersService } from "../shared/special-offers.service";
 
@@ -7,6 +8,8 @@ import { SpecialOffersService } from "../shared/special-offers.service";
   styleUrls: ["./special-offers.component.sass"]
 })
 export class SpecialOffersComponent implements OnInit {
+  faCheck = faCheck
+  faTimes = faTimes
   offers = [];
 
   constructor(private specialOfferService: SpecialOffersService) {}

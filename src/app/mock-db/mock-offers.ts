@@ -1,5 +1,4 @@
 import { SpecialOffer } from "../shared/special-offer.model";
-import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export const OFFERS: Array<SpecialOffer> = [
   {
@@ -8,15 +7,15 @@ export const OFFERS: Array<SpecialOffer> = [
     subTitle: '10% Off for all dishes!',
     checklist: [
       {
-        icon: faCheck,
+        icon: true,
         text: 'Only on Friday'
       },
       {
-        icon: faCheck,
+        icon: true,
         text: 'All products'
       },
       {
-        icon: faCheck,
+        icon: true,
         text: 'Online order'
       }
     ]
@@ -27,15 +26,15 @@ export const OFFERS: Array<SpecialOffer> = [
     subTitle: 'Get free burger from orders higher that $40!',
     checklist: [
       {
-        icon: faCheck,
+        icon: true,
         text: 'Only on Tuesdays'
       },
       {
-        icon: faTimes,
+        icon: false,
         text: 'Order higher than $40 '
       },
       {
-        icon: faCheck,
+        icon: true,
         text: 'Unless one burger ordered '
       }
     ]
@@ -46,11 +45,11 @@ export const OFFERS: Array<SpecialOffer> = [
     subTitle: 'Get free burger from orders higher that $40!',
     checklist: [
       {
-        icon: faCheck,
+        icon: true,
         text: 'Only on Weekends'
       },
       {
-        icon: faTimes,
+        icon: false,
         text: 'Order higher that $40'
       }
     ]
