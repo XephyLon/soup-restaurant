@@ -35,6 +35,7 @@ import { RouterModule } from '@angular/router';
 import { ParallaxFooterComponent } from './global/parallax-footer/parallax-footer.component';
 import { BlockquoteComponent } from './global/blockquote/blockquote.component';
 import { PageTitleComponent } from './shared/page-title/page-title.component';
+import { OfferComponent } from './shared/offer/offer.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { PageTitleComponent } from './shared/page-title/page-title.component';
     AccordionComponent,
     ParallaxFooterComponent,
     BlockquoteComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,

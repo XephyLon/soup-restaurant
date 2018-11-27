@@ -1,6 +1,6 @@
 import { SpecialOffersService } from './../../shared/special-offers.service';
 import { SpecialOffer } from './../../shared/special-offer.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faArrowLeft, faArrowRight, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NguCarouselConfig } from '@ngu/carousel';
 
@@ -11,7 +11,6 @@ import { NguCarouselConfig } from '@ngu/carousel';
 })
 export class OffersCarouselComponent implements OnInit {
 
-  @Input() name: string
   faArrowLeft = faArrowLeft
   faArrowRight = faArrowRight
   faCheck = faCheck
