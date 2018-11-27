@@ -9,7 +9,7 @@ export class ParallaxFooterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

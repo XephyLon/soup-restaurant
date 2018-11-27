@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faFacebook, faGoogle, faTwitter, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faGoogle, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

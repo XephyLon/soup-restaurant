@@ -1,4 +1,4 @@
-import { Component, AfterContentInit } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
@@ -47,15 +47,11 @@ export class HeaderComponent implements AfterContentInit {
     { class: 'menu-item', name: 'more', hasDropdown: false, router: '/book' }
   ];
 
-  ngAfterContentInit() {
+  ngAfterContentInit(): void {
     this.breakpointObserver
       .observe(['(min-width: 768px)'])
       .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          this.breakpoint = true;
-        } else {
-          this.breakpoint = false;
-        }
+        this.breakpoint = state.matches ? true : false
       });
   }
 }

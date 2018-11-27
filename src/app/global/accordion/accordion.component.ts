@@ -1,4 +1,4 @@
-import { Component, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, QueryList } from '@angular/core';
 import { PanelComponent } from './panel/panel.component';
 
 @Component({
@@ -11,15 +11,17 @@ export class AccordionComponent implements AfterContentInit {
   @ContentChildren(PanelComponent) panels: QueryList<PanelComponent>;
 
   ngAfterContentInit(): void {
-    this.panels.toArray().forEach((panel: PanelComponent) => {
-      panel.toggle.subscribe(() => { this.openPanel(panel); });
-    });
+    this.panels.toArray()
+      .forEach((panel: PanelComponent) => {
+        panel.toggle.subscribe(() => { this.openPanel(panel); });
+      });
   }
 
-  openPanel(panel: PanelComponent) {
-    this.panels.toArray().forEach(p => {
-      p.opened = false;
-    });
+  openPanel(panel: PanelComponent): void {
+    this.panels.toArray()
+      .forEach(p => {
+        p.opened = false;
+      });
     panel.opened = true;
   }
 

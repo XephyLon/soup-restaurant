@@ -12,7 +12,7 @@ export class PromoVideoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

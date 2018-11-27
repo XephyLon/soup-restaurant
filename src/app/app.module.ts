@@ -22,7 +22,6 @@ import { ReviewsComponent } from './about-us/reviews/reviews.component';
 import { FaqComponent } from './about-us/faq/faq.component';
 import { BookATableComponent } from './more/book-a-table/book-a-table.component';
 import { GridNavigationComponent } from './menu/grid-navigation/grid-navigation.component';
-import { ListNavigationComponent } from './menu/list-navigation/list-navigation.component';
 import { BlogpostComponent } from './more/blog/blogpost/blogpost.component';
 import { BlogsPageComponent } from './more/blog/blogs-page/blogs-page.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
@@ -52,7 +51,6 @@ import { PageTitleComponent } from './shared/page-title/page-title.component';
     FaqComponent,
     BookATableComponent,
     GridNavigationComponent,
-    ListNavigationComponent,
     BlogpostComponent,
     BlogsPageComponent,
     SpecialOffersComponent,
