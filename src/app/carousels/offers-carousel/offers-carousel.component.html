@@ -8,7 +8,6 @@
               <h2 class="mb-2"><a href="#">{{ item.title }}</a></h2>
               <h5 class="muted">{{ item.subTitle }}</h5>
               <ul class="special-offer__check-list">
-                <!-- TODO: Apply colors dynamically -->
                 <li *ngFor="let checks of item.checklist">
                   <fa-icon [icon]="checks.icon ? faCheck : faTimes" [ngClass]="checks.icon ? 'green' : 'red'"></fa-icon>{{ checks.text }}
                 </li>

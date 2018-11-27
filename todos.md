@@ -19,7 +19,7 @@ Replace some of the ugly Font Awesome icons.
 
 ### TODO LONG TERM ###
 
-Make the page title a separate component
+<!-- Make the page title a separate component -->
 
 <!-- Make menu a single page. -->
 
