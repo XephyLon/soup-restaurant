@@ -2,7 +2,25 @@
 
 <div class="content">
   <div class="clearfix">
-    <!-- Reserved for carousel  -->
-
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Reserved for carousel  -->
+        <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="images">
+          <ngu-tile *nguCarouselDef="let item">
+            <div class="tile zoom" [style.background]="'url('+item.image+')'"></div>
+          </ngu-tile>
+          <div class="pointers" NguCarouselPoint>
+            <div
+              class="pinters--image"
+              *ngFor="let pointer of myCarousel.dataSource; index as i"
+              [style.background]="'url('+pointer.image+')'"
+              [class.active]="i == myCarousel.activePoint"
+              (click)="myCarousel.moveTo(i)">{{ pointer.title }} </div>
+          </div>
+          <button NguCarouselPrev class="leftRs">&lt;</button>
+          <button NguCarouselNext class="rightRs">&gt;</button>
+        </ngu-carousel>
+      </div>
+    </div>
   </div>
 </div>
