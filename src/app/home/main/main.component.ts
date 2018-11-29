@@ -42,7 +42,7 @@ export class MainComponent implements OnInit {
     },
     touch: true,
     loop: true,
-    interval: { timing: 2000 },
+    interval: { timing: 5000 },
     animation: "lazy"
   };
   tempData: Array<any>;
