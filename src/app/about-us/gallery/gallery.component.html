@@ -11,14 +11,14 @@
           </ngu-tile>
           <div class="pointers" NguCarouselPoint>
             <div
-              class="pinters--image"
+              class="pointers--image"
               *ngFor="let pointer of myCarousel.dataSource; index as i"
               [style.background]="'url('+pointer.image+')'"
-              [class.active]="i == myCarousel.activePoint"
-              (click)="myCarousel.moveTo(i)">{{ pointer.title }} </div>
+              [class.pointers--active]="i == myCarousel.activePoint"
+              (click)="myCarousel.moveTo(i)"></div>
           </div>
-          <button NguCarouselPrev class="leftRs">&lt;</button>
-          <button NguCarouselNext class="rightRs">&gt;</button>
+          <button NguCarouselPrev class="ngu-button ngu-button--left">&lt;</button>
+          <button NguCarouselNext class="ngu-button ngu-button--right">&gt;</button>
         </ngu-carousel>
       </div>
     </div>

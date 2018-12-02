@@ -1,5 +1,8 @@
+@import "../../../_variables.sass"
+@import "../../../_breakpoints.sass"
+
 .tile
-  height: 90vh
+  height: 99vh
   background-color: #ccc
   background-size: cover
 
@@ -8,5 +11,50 @@ ngu-carousel
   height: 100vh
   margin-bottom: 3rem
 
+ngu-tile
+  padding: 0 !important
+
 .active
   height: 50px
+
+.pointers
+  display: inline-flex
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  bottom: 2rem
+  &--image
+    outline: 2px solid $main-dark
+    margin-right: 2rem
+    cursor: pointer
+    padding: 1.8rem 3.2rem
+    background-position: center !important
+    background-size: contain !important
+    transition-duration: .3s
+    &:hover
+      outline-color: $primary
+  &--active
+    transform: scale(1.2)
+    outline-color: $primary
+
+
+.ngu-button
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.3)
+  border: none
+  color: #FFF
+  background-color: $main-dark
+  position: absolute
+  margin: auto
+  top: 0
+  bottom: 0
+  width: 70px
+  height: 70px
+  cursor: pointer
+  transition: all .3s ease-out
+  border-radius: 5px
+  &:hover
+    color: $primary
+  &--left
+    left: 15px
+  &--right
+    right: 15px
