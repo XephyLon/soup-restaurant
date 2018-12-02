@@ -1,3 +1,4 @@
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { GalleryService } from './../../shared/gallery.service';
 import { GalleryImage } from './../../shared/gallery.model';
 import { Component, OnInit } from '@angular/core';
@@ -9,6 +10,8 @@ import { NguCarouselConfig } from '@ngu/carousel';
   styleUrls: ["./gallery.component.sass"]
 })
 export class GalleryComponent implements OnInit {
+  faArrowLeft = faArrowLeft
+  faArrowRight = faArrowRight
 
   images: Array<GalleryImage> = []
 

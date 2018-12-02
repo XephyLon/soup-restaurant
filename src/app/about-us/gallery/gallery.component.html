@@ -17,8 +17,8 @@
               [class.pointers--active]="i == myCarousel.activePoint"
               (click)="myCarousel.moveTo(i)"></div>
           </div>
-          <button NguCarouselPrev class="ngu-button ngu-button--left">&lt;</button>
-          <button NguCarouselNext class="ngu-button ngu-button--right">&gt;</button>
+          <button NguCarouselPrev class="ngu-button ngu-button--left"><fa-icon [icon]="faArrowLeft"></fa-icon></button>
+          <button NguCarouselNext class="ngu-button ngu-button--right"><fa-icon [icon]="faArrowRight"></fa-icon></button>
         </ngu-carousel>
       </div>
     </div>
